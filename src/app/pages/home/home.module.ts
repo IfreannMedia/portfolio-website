@@ -1,3 +1,6 @@
+import { HeaderModule } from './../../components/header/header.module';
+import { ProjectViewModule } from './../../components/project-view/project-view.module';
+import { SideStickyModule } from './../../components/side-sticky/side-sticky.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -12,8 +15,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
+    HeaderModule,
+    SideStickyModule,
+    ProjectViewModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  schemas: []
 })
-export class HomePageModule {}
+export class HomePageModule { }
