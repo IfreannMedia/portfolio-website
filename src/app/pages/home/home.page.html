@@ -1,3 +1,15 @@
-<app-header></app-header>
-<app-project-view></app-project-view>
-<app-side-sticky></app-side-sticky>
+<!-- <div fxLayout="column none" fxLayoutAlign="start" class="full-width"> -->
+<ion-content>
+    <app-header></app-header>
+    <div fxLayout="row none" id="intro-container">
+
+        <img id=intro-image src="../../../assets/images/placeholder-image.jpg" />
+
+        <div id="intro-description">
+            {{homeDescription}}
+        </div>
+    </div>
+    <app-project-view></app-project-view>
+    <app-side-sticky></app-side-sticky>
+</ion-content>
+<!-- </div> -->

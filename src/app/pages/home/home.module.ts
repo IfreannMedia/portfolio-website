@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
@@ -16,6 +17,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     FormsModule,
     IonicModule,
     HeaderModule,
+    FlexLayoutModule,
     SideStickyModule,
     ProjectViewModule,
     HomePageRoutingModule
