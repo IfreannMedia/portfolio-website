@@ -1,0 +1,28 @@
+:host {
+    #slides-container {
+        height: 600px;
+        position: relative;
+    }
+
+    ion-slides {
+        height: 100%;
+    }
+    ion-slide {
+        background-color: green;
+        height: 100%;
+    }
+
+    ion-button {
+        z-index: 2;
+        height: 540px;
+        position: absolute;
+        bottom: 0;
+        &#left {
+            left: 0;
+        }
+
+        &#right {
+            right: 0;
+        }
+    }
+}
