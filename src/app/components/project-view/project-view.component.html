@@ -2,9 +2,12 @@
   <ion-button class="ion-no-margin" id="left">left</ion-button>
   <ion-button class="ion-no-margin" id="right">right</ion-button>
   <ion-slides>
-    <ion-slide class="full-height" *ngFor="let project of projects">
-      <div>{{project.name}}</div>
-      <div>{{project.description}}</div>
+    <ion-slide *ngFor="let project of projects" fxLayout="row none">
+      <div fxFlex class="full-height">technologies used</div>
+      <div fxFlex fxLayout="column none" class="full-height">
+        <div fxFlex fxLayoutAlign="start" class="ion-text-left">brief description</div>
+        <div fxFlex class="ion-text-left">Challenges noteworthy stuff</div>
+      </div>
     </ion-slide>
 
   </ion-slides>
