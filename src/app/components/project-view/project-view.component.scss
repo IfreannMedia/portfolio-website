@@ -1,28 +1,34 @@
 :host {
     #slides-container {
         height: 600px;
-        position: relative;
+        // position: relative;
     }
 
     ion-slides {
         height: 100%;
     }
     ion-slide {
-        background-color: green;
+        background-color: rgb(255, 255, 255);
         height: 100%;
+
+        .simple-container {
+            height: 95%;
+            box-shadow: 0px 0px 5px 5px rgba(204,204,204,1);
+        }
     }
 
     ion-button {
         z-index: 2;
         height: 540px;
-        position: absolute;
-        bottom: 0;
-        &#left {
-            left: 0;
-        }
+        align-self: flex-end;
+        // position: absolute;
+        // bottom: 0;
+        // &#left {
+        //     left: 0;
+        // }
 
-        &#right {
-            right: 0;
-        }
+        // &#right {
+        //     right: 0;
+        // }
     }
 }
