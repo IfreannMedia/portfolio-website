@@ -8,11 +8,15 @@
       </ion-toolbar>
     </ion-header>
     <ion-slides fxFlex [options]="slideOpts" class="ion-no-margin">
-      <ion-slide *ngFor="let project of projects" fxFlex fxLayout="row none" class="ion-padding">
-        <ion-card fxFlex class="full-height simple-container" id="tech-used">technologies used</ion-card>
+      <ion-slide *ngFor="let project of projects" fxLayout="row none" class="ion-padding">
+        <ion-card fxFlex class="full-height simple-container" id="tech-used">
+          <ion-list>
+            <ion-item *ngFor="let tech of project.technologiesUsed">{{tech}}</ion-item>
+          </ion-list>
+        </ion-card>
         <div fxFlex fxLayout="column none" class="full-height">
-          <ion-card fxFlex fxLayoutAlign="start" class="ion-text-left simple-container">brief description</ion-card>
-          <ion-card fxFlex class="ion-text-left simple-container">Challenges noteworthy stuff</ion-card>
+          <ion-card fxFlex fxLayoutAlign="start" class="ion-text-left simple-container">{{project.description}}</ion-card>
+          <ion-card fxFlex class="ion-text-left simple-container">{{project.challengesAndOps}}</ion-card>
         </div>
       </ion-slide>
     </ion-slides>

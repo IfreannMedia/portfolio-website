@@ -8,6 +8,5 @@ export class Project {
     public challengesAndOps: string = "";
 
     constructor() {
-        this.name = "fdgafsd";
     }
 }

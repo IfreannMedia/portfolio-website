@@ -1,3 +1,4 @@
+import { ProjectService } from './../../services/project-service.ts.service';
 import { Component, OnInit } from '@angular/core';
 import { Project } from 'src/app/classes/project';
 import { SlideOpts } from 'src/app/classes/slideOpts';
@@ -11,7 +12,7 @@ export class ProjectViewComponent implements OnInit {
 
   public projects: Project[] = [];
   public slideOpts = new SlideOpts();
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
     let project1 = new Project();
@@ -20,6 +21,10 @@ export class ProjectViewComponent implements OnInit {
 
     this.projects.push(project1);
 
+    this.projects.push(...this.projectService.projects);
+    console.log(this.projects)
+    console.log(this.projectService.projects)
+    debugger;
   }
 
 }
