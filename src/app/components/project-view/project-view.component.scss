@@ -1,7 +1,16 @@
 :host {
     #slides-container {
-        height: 600px;
+        height: 100vh;
+        min-height: 200px;
+        max-height: 600px;
         width: 100%;
+    }
+
+    ion-header{
+        height: 50px;
+        ion-toolbar {
+            height: 50px;
+        }
     }
 
     ion-slide {
@@ -15,7 +24,7 @@
 
     ion-button {
         z-index: 2;
-        height: 540px;
+        height: calc(100% - 50px);
         width: 50px;
         align-self: flex-end;
     }
