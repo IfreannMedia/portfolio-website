@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from 'src/app/classes/project';
+import { SlideOpts } from 'src/app/classes/slideOpts';
 
 @Component({
   selector: 'app-project-view',
@@ -9,6 +10,7 @@ import { Project } from 'src/app/classes/project';
 export class ProjectViewComponent implements OnInit {
 
   public projects: Project[] = [];
+  public slideOpts = new SlideOpts();
   constructor() { }
 
   ngOnInit() {

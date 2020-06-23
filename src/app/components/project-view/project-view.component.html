@@ -1,20 +1,19 @@
 <div id="slides-container" fxLayout="row none">
   <ion-button class="ion-no-margin" id="left">left</ion-button>
-  <div fxFlex fxLayout="column none">
+  <div id="slides-wrapper" fxFlex fxLayout="column none">
     <ion-header>
       <ion-toolbar>
         <h3>Test Name</h3>
       </ion-toolbar>
     </ion-header>
-    <ion-slides class="ion-no-margin">
-      <ion-slide *ngFor="let project of projects" fxFlex fxLayout="row none">
-        <ion-card fxFlex class="full-height simple-container ion-padding">technologies used</ion-card>
-        <div fxFlex fxLayout="column none" class="full-height simple-container ion-padding">
+    <ion-slides fxFlex [options]="slideOpts" class="ion-no-margin">
+      <ion-slide *ngFor="let project of projects" fxFlex fxLayout="row none" class="ion-padding">
+        <ion-card fxFlex class="full-height simple-container" id="tech-used">technologies used</ion-card>
+        <div fxFlex fxLayout="column none" class="full-height">
           <ion-card fxFlex fxLayoutAlign="start" class="ion-text-left simple-container">brief description</ion-card>
-          <ion-card fxFlex class="ion-text-left">Challenges noteworthy stuff</ion-card>
+          <ion-card fxFlex class="ion-text-left simple-container">Challenges noteworthy stuff</ion-card>
         </div>
       </ion-slide>
-  
     </ion-slides>
   </div>
   <ion-button class="ion-no-margin" id="right">right</ion-button>

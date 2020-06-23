@@ -1,15 +1,11 @@
 :host {
     #slides-container {
         height: 600px;
-        // position: relative;
+        width: 100%;
     }
 
-    ion-slides {
-        height: 100%;
-    }
     ion-slide {
         background-color: rgb(255, 255, 255);
-        height: 100%;
 
         .simple-container {
             height: 95%;
@@ -20,15 +16,16 @@
     ion-button {
         z-index: 2;
         height: 540px;
+        width: 50px;
         align-self: flex-end;
-        // position: absolute;
-        // bottom: 0;
-        // &#left {
-        //     left: 0;
-        // }
+    }
 
-        // &#right {
-        //     right: 0;
-        // }
+    #slides-wrapper {
+        max-width: calc(100% - 100px);
+    }
+
+    #tech-used {
+        height: 95%;
+        width: 95%;
     }
 }
