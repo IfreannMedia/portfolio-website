@@ -15,16 +15,7 @@ export class ProjectViewComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-    let project1 = new Project();
-    project1.name = "project1";
-    project1.description = "a description";
-
-    this.projects.push(project1);
-
     this.projects.push(...this.projectService.projects);
-    console.log(this.projects)
-    console.log(this.projectService.projects)
-    debugger;
   }
 
 }

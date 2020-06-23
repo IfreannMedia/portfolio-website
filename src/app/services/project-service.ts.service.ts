@@ -17,6 +17,13 @@ export enum technologies {
   PaperPrototyping = "paper prototyping",
   RapidPrototyping = "Rapid Prototyping",
   UserTesting = "User Testing",
+  Angular = "Angular",
+  Ionic = "Ionic",
+  Typescript = "Typescript",
+  OOP = "Object Oriented Programming",
+  Jasmine = "Jasmine Testing Framework",
+  Jenkins = "Jenkins",
+  Sonarwube = "Sonarqube"
 }
 
 
@@ -33,8 +40,8 @@ export class ProjectService {
   }
 
 
+  // TODO store the projects in a database and retrieve with a rest call
   private getProjects() {
-    debugger;
     let mastersDegree = new Project();
     mastersDegree.name = "Creative Digital Media Msc";
     mastersDegree.technologiesUsed = [technologies.Html, technologies.Javascript, technologies.css, technologies.Unity, technologies.CSharp, technologies.Illustrator,

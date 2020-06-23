@@ -39,6 +39,8 @@
     }
 
     ion-card {
-        overflow-y: auto;
+        &:hover {
+            overflow-y: auto;
+        }
     }
 }
