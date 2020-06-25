@@ -4,7 +4,7 @@
   <div id="slides-wrapper" fxFlex fxLayout="column none">
     <ion-header>
       <ion-toolbar>
-        <h3>Test Name</h3>
+        <h3 *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
       </ion-toolbar>
     </ion-header>
     <ion-slides fxFlex [options]="slideOpts" class="ion-no-margin">
@@ -15,7 +15,8 @@
           </ion-list>
         </ion-card>
         <div fxFlex fxLayout="column none" class="full-height">
-          <ion-card fxFlex fxLayoutAlign="start" class="ion-text-left simple-container">{{project.description}}</ion-card>
+          <ion-card fxFlex fxLayoutAlign="start" class="ion-text-left simple-container">{{project.description}}
+          </ion-card>
           <ion-card fxFlex class="ion-text-left simple-container">{{project.challengesAndOps}}</ion-card>
         </div>
       </ion-slide>
