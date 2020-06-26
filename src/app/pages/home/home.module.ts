@@ -1,3 +1,4 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderModule } from './../../components/header/header.module';
 import { ProjectViewModule } from './../../components/project-view/project-view.module';
 import { SideStickyModule } from './../../components/side-sticky/side-sticky.module';
@@ -15,6 +16,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
+    FlexLayoutModule,
     HeaderModule,
     SideStickyModule,
     ProjectViewModule,
