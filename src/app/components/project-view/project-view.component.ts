@@ -23,7 +23,14 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit() {
+    this.subscribeToSlideChange();
     this.updateActiveIndex();
+  }
+
+  public subscribeToSlideChange() {
+    this.slides.ionSlideDidChange.subscribe(() => {
+      this.updateActiveIndex();
+    });
   }
 
   private updateActiveIndex() {
