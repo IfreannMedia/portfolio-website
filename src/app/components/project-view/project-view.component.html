@@ -1,6 +1,6 @@
 <div id="slides-container" fxLayout="row none">
-  <ion-button [disabled]="!projects || projects && projects.length <= 1" (click)="slides.slidePrev()"
-    class="ion-no-margin" id="left">left
+  <ion-button [disabled]="!projects || (projects && projects.length <= 1 || slidesIndex === 0)"
+    (click)="slides.slidePrev()" class="ion-no-margin" id="left">left
   </ion-button>
   <div id="slides-wrapper" fxFlex fxLayout="column none">
     <ion-header>
@@ -23,8 +23,8 @@
       </ion-slide>
     </ion-slides>
   </div>
-  <ion-button [disabled]="!projects || projects && projects.length <= 1" (click)="slides.slideNext()"
-    class="ion-no-margin" id="right">right
+  <ion-button [disabled]="!projects || (projects && projects.length <= 1 || slidesIndex === projects.length-1)"
+    (click)="slides.slideNext()" class="ion-no-margin" id="right">right
   </ion-button>
 
 </div>

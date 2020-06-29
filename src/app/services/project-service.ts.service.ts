@@ -28,7 +28,8 @@ export enum technicalSkills {
   xCode = "xCode",
   crossPlaatformDev = "cross platform dev",
   bitBucket = "Bitbucket",
-  sourceTree = "Sourcetree"
+  sourceTree = "Sourcetree",
+  jira = "jira"
 }
 
 export enum bachalorSkills {
@@ -80,8 +81,22 @@ export class ProjectService {
   public retrieveAkka() {
     let mastersDegree = new Project();
     mastersDegree.name = "Akka Technologies";
-    mastersDegree.technologiesUsed = [technicalSkills.Html, technicalSkills.Typescript, technicalSkills.scss, technicalSkills.Angular, technicalSkills.Ionic, technicalSkills.Jasmine,
-    technicalSkills.Sonarwube, technicalSkills.UX, technicalSkills.rxjs, technicalSkills.xCode, technicalSkills.crossPlaatformDev, technicalSkills.bitBucket, technicalSkills.sourceTree];
+    mastersDegree.technologiesUsed = [
+      technicalSkills.Angular,
+      technicalSkills.Ionic,
+      technicalSkills.scss,
+      technicalSkills.Typescript,
+      technicalSkills.rxjs,
+      technicalSkills.crossPlaatformDev,
+      technicalSkills.Html,
+      technicalSkills.bitBucket,
+      technicalSkills.sourceTree,
+      technicalSkills.Jasmine,
+      technicalSkills.Sonarwube,
+      technicalSkills.UX,
+      technicalSkills.xCode,
+      technicalSkills.jira,
+    ];
     mastersDegree.description = "At Akka I work as part of a determined dev team in the maintanance of a cross platform mobile first web App, used wordlwide in" +
       " production by a large autombile manufacturing company based in Munich. As well as maintaining and improving legacy code, I also add new features and was part of a total" +
       " migration of the angular and ionic versions.";
