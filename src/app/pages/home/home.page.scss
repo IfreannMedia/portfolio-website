@@ -9,11 +9,29 @@ ion-content {
 }
 
 #intro-image {
-    width: 50%;
-    height: 100%;
+
+    object-fit: cover;
+    &.small-screen {
+        filter: blur(4px);
+        height: 40px !important;
+    }
 }
 
-#intro-description {
+.flex-el {
+    flex: 1 1 auto;
     width: 50%;
     height: 100%;
+
+    &.small-screen {
+        height: 50%;
+        width: 100%;
+    }
+}
+
+.test-border {
+    border: 4px solid magenta;
+}
+
+.test-border-2 {
+    border: 6px dotted orange;
 }
