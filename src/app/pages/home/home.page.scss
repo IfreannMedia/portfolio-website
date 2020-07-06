@@ -9,8 +9,11 @@ ion-content {
 }
 
 #intro-image {
-
-    object-fit: cover;
+    background-image: url(../../../assets/images/placeholder-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     &.small-screen {
         filter: blur(4px);
         height: 40px !important;
@@ -34,4 +37,9 @@ ion-content {
 
 .test-border-2 {
     border: 6px dotted orange;
+}
+
+ion-icon {
+    font-size: 32px;
+    margin-right: 20px;
 }
