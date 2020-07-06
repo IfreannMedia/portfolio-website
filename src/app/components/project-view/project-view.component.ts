@@ -33,6 +33,10 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
     });
   }
 
+  public segmentChanged(change) {
+    console.log(change); // change.detail.value
+  }
+
   private updateActiveIndex() {
     if (this.slides) {
       this.slides.getActiveIndex().then((index: number) => {
@@ -40,5 +44,6 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
       })
     }
   }
+
 
 }
