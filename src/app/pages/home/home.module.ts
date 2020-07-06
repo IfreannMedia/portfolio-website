@@ -1,3 +1,4 @@
+import { FooterComponentModule } from './../../components/footer/footer.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderModule } from './../../components/header/header.module';
 import { ProjectViewModule } from './../../components/project-view/project-view.module';
@@ -20,7 +21,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     HeaderModule,
     SideStickyModule,
     ProjectViewModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    FooterComponentModule
   ],
   declarations: [HomePage],
   schemas: []

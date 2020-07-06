@@ -1,10 +1,7 @@
-<!-- <div fxLayout="column none" fxLayoutAlign="start" class="full-width"> -->
+<app-header title="Portfolio - Warren Roche"></app-header>
 <ion-content>
-    <app-header title="Portfolio - Warren Roche"></app-header>
     <div fxLayout="row none" fxLayout.lt-md="column none" id="intro-container">
         <div class="flex-el" ngClass.lt-md="small-screen" id="intro-image"></div>
-        <!-- <img class="flex-el" ngClass.lt-md="small-screen" id=intro-image
-            src="../../../assets/images/placeholder-image.jpg" /> -->
         <div class="flex-el" ngClass.lt-md="small-screen" id="intro-description">
             {{homeDescription}}
         </div>
@@ -19,8 +16,9 @@
     </app-side-sticky>
     <app-side-sticky style="top:128px">
         <div style="width: 100%;" fxLayout="row none" fxLayoutAlign="start center">
-            <ion-icon name="logo-github"></ion-icon><span style="font-weight: bold;"
-                class="ion-no-margin">visit my git</span>
+            <ion-icon name="logo-github"></ion-icon><span style="font-weight: bold;" class="ion-no-margin">visit my
+                git</span>
         </div>
     </app-side-sticky>
+    <app-footer></app-footer>
 </ion-content>
