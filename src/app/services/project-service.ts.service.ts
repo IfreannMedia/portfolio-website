@@ -46,19 +46,23 @@ export enum bachalorSkills {
   germanCult = "German cultural studies",
 }
 
+export enum projectTypes {
+  experience = 'experience',
+  education = 'education',
+  interests = 'interests'
+}
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
 
-
   public projects: Project[] = []
 
   constructor() {
     this.getProjects();
   }
-
 
   // TODO store the projects in a database and retrieve with a rest call
   private getProjects() {
@@ -71,16 +75,31 @@ export class ProjectService {
   public retrieveMastersDegree() {
     let mastersDegree = new Project();
     mastersDegree.name = "Creative Digital Media Msc";
-    mastersDegree.technologiesUsed = [technicalSkills.Html, technicalSkills.Javascript, technicalSkills.css, technicalSkills.Unity, technicalSkills.CSharp, technicalSkills.Illustrator,
-    technicalSkills.PremierPro, technicalSkills.Photoshop, technicalSkills.UserTesting, technicalSkills.PaperPrototyping, technicalSkills.RapidPrototyping];
-    mastersDegree.description = "I was awarded a master's degree in Creative Digital Media with a specialization in game development in early 2019" +
-      " from the Technological University of Dublin."
+    mastersDegree.projectType = projectTypes.education;
+    if (this.projects.findIndex(proj => proj.name.toLowerCase() === mastersDegree.name.toLowerCase()) === -1) {
+      mastersDegree.technologiesUsed = [
+        technicalSkills.Html,
+        technicalSkills.Javascript,
+        technicalSkills.css,
+        technicalSkills.Unity,
+        technicalSkills.CSharp,
+        technicalSkills.Illustrator,
+        technicalSkills.PremierPro,
+        technicalSkills.Photoshop,
+        technicalSkills.UserTesting,
+        technicalSkills.PaperPrototyping,
+        technicalSkills.RapidPrototyping];
+      mastersDegree.description = "I was awarded a master's degree in Creative Digital Media with a specialization in game development in early 2019" +
+        " from the Technological University of Dublin."
 
-    this.projects.push(mastersDegree);
+      this.projects.push(mastersDegree);
+    }
+    return mastersDegree;
   }
   public retrieveAkka() {
     let mastersDegree = new Project();
     mastersDegree.name = "Akka Technologies";
+    mastersDegree.projectType = projectTypes.experience;
     mastersDegree.technologiesUsed = [
       technicalSkills.Angular,
       technicalSkills.Ionic,
@@ -106,6 +125,7 @@ export class ProjectService {
   public retrieveBachelorDegree() {
     let mastersDegree = new Project();
     mastersDegree.name = "English, German BA International";
+    mastersDegree.projectType = projectTypes.education;
     mastersDegree.technologiesUsed = [
       bachalorSkills.critThinking,
       bachalorSkills.academicWriting,
@@ -127,6 +147,7 @@ export class ProjectService {
   public retrieveAppleCare() {
     let mastersDegree = new Project();
     mastersDegree.name = "ApplecCare Technical Support";
+    mastersDegree.projectType = projectTypes.experience;
     mastersDegree.technologiesUsed = [
       bachalorSkills.critThinking,
       bachalorSkills.academicWriting,

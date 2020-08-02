@@ -6,7 +6,7 @@ export class Project {
     public dateFrom: Date = new Date();
     public dateTo: Date = new Date();
     public challengesAndOps: string = "";
-
+    public projectType: string = ''
     constructor() {
     }
 }

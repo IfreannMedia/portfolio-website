@@ -1,10 +1,12 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { SideStickyComponent } from './side-sticky.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-    imports: [IonicModule],
+    imports: [CommonModule,
+        IonicModule],
     declarations: [SideStickyComponent],
     exports: [SideStickyComponent]
 })

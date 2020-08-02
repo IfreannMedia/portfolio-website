@@ -1,7 +1,7 @@
-<ion-segment value="experience" (ionChange)="segmentChanged($event)" fxLayout="row none" fxLayoutAlign="space-between">
-  <ion-segment-button fxFlex="100%" value="experience"><ion-label>Experience</ion-label></ion-segment-button>
-  <ion-segment-button fxFlex="100%" value="education"><ion-label>Education</ion-label></ion-segment-button>
-  <ion-segment-button fxFlex="100%" value="interests"><ion-text>Interests</ion-text></ion-segment-button>
+<ion-segment value="experience" (ionChange)="slideToNextSection($event)" fxLayout="row none" fxLayoutAlign="space-between">
+  <ion-segment-button *ngFor="let section of sections" fxFlex="100%" value="{{section}}">
+    <ion-label>{{section}}</ion-label>
+  </ion-segment-button>
 </ion-segment>
 
 <div id="slides-container" fxLayout="row none">
@@ -32,5 +32,4 @@
   <ion-button [disabled]="!projects || (projects && projects.length <= 1 || slidesIndex === projects.length-1)"
     (click)="slides.slideNext()" class="ion-no-margin" id="right">right
   </ion-button>
-
 </div>
