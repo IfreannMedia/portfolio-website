@@ -14,7 +14,7 @@
         <h3 *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
       </ion-toolbar>
     </ion-header>
-    <ion-slides #slides fxFlex [options]="slideOpts" class="ion-no-margin">
+    <ion-slides #slides fxFlex [options]="slideOpts" class="ion-no-margin" (ionSlideDidChange)="slideChanged($event)">
       <ion-slide *ngFor="let project of projects" fxLayout="row none" class="ion-padding">
         <ion-card fxFlex class="full-height simple-container" id="tech-used">
           <ion-list>

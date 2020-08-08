@@ -2,8 +2,7 @@ import { ProjectService, projectTypes } from './../../services/project-service.t
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Project } from 'src/app/classes/project';
 import { SlideOpts } from 'src/app/classes/slideOpts';
-import { IonSlides } from '@ionic/angular';
-import { Section } from 'src/app/classes/section';
+import { IonSlides, IonSegment } from '@ionic/angular';
 
 @Component({
   selector: 'app-project-view',
@@ -13,6 +12,7 @@ import { Section } from 'src/app/classes/section';
 export class ProjectViewComponent implements OnInit, AfterViewInit {
 
   @ViewChild(IonSlides) slides: IonSlides;
+  @ViewChild(IonSegment) segment: IonSegment;
   public slidesIndex: number = 0;
   public sections: string[] = [];
   public projects: Project[] = [];
@@ -203,11 +203,11 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
     }
   }
 
-  public slideToNextSection(change) {
+  public slideToNextSection(change: CustomEvent) {
     const nextValue = change.detail.value;
     if (this.slides) {
-      const index = this.projects.findIndex((proj: Project) => {
-        return proj.projectType.toLowerCase() === nextValue.toLowerCase();
+      const index = this.projects.findIndex((proj: Project, i) => {
+        return proj.projectType.toLowerCase() === nextValue.toLowerCase() && i == this.slidesIndex;
       })
       if (index > -1) {
         this.slides.slideTo(index);
@@ -215,11 +215,20 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private updateActiveIndex() {
+  private updateActiveIndex(): Promise<any> {
     if (this.slides) {
-      this.slides.getActiveIndex().then((index: number) => {
+      return this.slides.getActiveIndex().then((index: number) => {
         this.slidesIndex = index;
       })
     }
   }
+
+  public slideChanged() {
+    this.updateActiveIndex().then(() => {
+      if (this.segment) {
+        this.segment.value = this.projects[this.slidesIndex] ? this.projects[this.slidesIndex].projectType : this.segment.value;
+      }
+    });
+  }
+  // TODO REPLACE THE TABS WITH A TIMELINE, AND SIMPLY "TAG" EACH OBJECT AS BEING EXPERIENCE OR EDUCATION ETC
 }
