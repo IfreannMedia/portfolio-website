@@ -5,7 +5,7 @@
             height: 100%;
             --background: var(--app-color-a);
             ion-title {
-                color: white;
+                color: var(--app-color-a-text);
             }
         }
     }
