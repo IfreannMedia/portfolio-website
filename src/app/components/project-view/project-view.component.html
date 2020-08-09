@@ -1,19 +1,13 @@
-<ion-segment value="experience" (ionChange)="slideToNextSection($event)" fxLayout="row none" fxLayoutAlign="space-between">
-  <ion-segment-button *ngFor="let section of sections" fxFlex="100%" value="{{section}}">
-    <ion-label>{{section}}</ion-label>
-  </ion-segment-button>
-</ion-segment>
-
+<ion-header>
+  <ion-toolbar>
+    <h3 *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
+  </ion-toolbar>
+</ion-header>
 <div id="slides-container" fxLayout="row none">
   <ion-button [disabled]="!projects || (projects && projects.length <= 1 || slidesIndex === 0)"
     (click)="slides.slidePrev()" class="ion-no-margin" id="left">left
   </ion-button>
   <div id="slides-wrapper" fxFlex fxLayout="column none">
-    <ion-header>
-      <ion-toolbar>
-        <h3 *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
-      </ion-toolbar>
-    </ion-header>
     <ion-slides #slides fxFlex [options]="slideOpts" class="ion-no-margin" (ionSlideDidChange)="slideChanged($event)">
       <ion-slide *ngFor="let project of projects" fxLayout="row none" class="ion-padding">
         <ion-card fxFlex class="full-height simple-container" id="tech-used">
