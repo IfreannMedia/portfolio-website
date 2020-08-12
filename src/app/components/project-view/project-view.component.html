@@ -1,7 +1,8 @@
 <ion-header>
-  <ion-toolbar>
-    <h3 *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
-  </ion-toolbar>
+  <div fxFlex="row none" fxLayoutAlign="space-between center">
+    <h3 fxFlex="1 1 70%" *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
+    <span *ngIf="selectedProject" id="timeline-span" fxFlex="1 1 30%" fxLayoutAlign="end">{{selectedProject.dateFrom}} - {{selectedProject.dateTo}}</span>
+  </div>
 </ion-header>
 <div id="slides-container" fxLayout="row none">
   <ion-button [disabled]="!projects || (projects && projects.length <= 1 || slidesIndex === 0)"
