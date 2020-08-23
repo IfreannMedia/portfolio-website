@@ -10,7 +10,7 @@
     (click)="slides.slidePrev()" class="ion-no-margin" id="left">left
   </ion-button>
   <div id="slides-wrapper" fxFlex fxLayout="column none">
-    <ion-slides #slides fxFlex [options]="slideOpts" class="ion-no-margin" (ionSlideDidChange)="slideChanged($event)">
+    <ion-slides #slides fxFlex [options]="slideOpts" class="ion-no-margin" (ionSlideDidChange)="slideChanged()">
       <ion-slide *ngFor="let project of projects" fxLayout="row none" class="ion-padding">
         <ion-card fxFlex class="full-height simple-container" id="tech-used">
           <ion-list>
