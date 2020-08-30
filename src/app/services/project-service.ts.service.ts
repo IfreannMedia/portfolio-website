@@ -113,6 +113,22 @@ export class ProjectService {
       technicalSkills.UserTesting,
       technicalSkills.PaperPrototyping,
       technicalSkills.RapidPrototyping]
+  }, {
+    name: 'ApplecCare Technical Support',
+    challengesAndOps: '',
+    description: '',
+    dateFrom: new Date('2015'),
+    dateTo: new Date('2017'),
+    projectType: projectTypes.experience,
+    technologiesUsed: [
+      appleSkills.systematicTroubleshooting,
+      appleSkills.communication,
+      appleSkills.problemSolving,
+      appleSkills.german,
+      appleSkills.teamwork,
+      appleSkills.performanceTracking,
+      appleSkills.goingAboveAndBeyondExp,
+    ]
   },
   {
     name: 'English, German BA International',
@@ -135,23 +151,6 @@ export class ProjectService {
       bachalorSkills.statistics,
       bachalorSkills.scientificExperimentation,
       bachalorSkills.germanCult]
-  }
-    , {
-    name: 'ApplecCare Technical Support',
-    challengesAndOps: '',
-    description: '',
-    dateFrom: new Date(),
-    dateTo: new Date(),
-    projectType: projectTypes.experience,
-    technologiesUsed: [
-      appleSkills.systematicTroubleshooting,
-      appleSkills.communication,
-      appleSkills.problemSolving,
-      appleSkills.german,
-      appleSkills.teamwork,
-      appleSkills.performanceTracking,
-      appleSkills.goingAboveAndBeyondExp,
-    ]
   }];
 
   constructor() {

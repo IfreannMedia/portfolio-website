@@ -1,8 +1,14 @@
 <ion-header>
-  <div fxFlex="row none" fxLayoutAlign="space-between center">
-    <h3 fxFlex="1 1 70%" *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}</h3>
-    <span *ngIf="selectedProject" id="timeline-span" fxFlex="1 1 30%" fxLayoutAlign="end">
-      {{selectedProject.dateFrom | date: 'mediumDate'}} - {{selectedProject.dateTo| date: 'mediumDate'}}</span>
+  <div fxFlex="row none" fxLayoutAlign="start center">
+    <h3 class="padding-m" *ngIf="projects && projects.length && projects[slidesIndex]">{{projects[slidesIndex].name}}
+    </h3>
+    <ion-item fxFlex="1 0 50%" id="timeline">
+      <div slot="end" *ngFor="let project of projects; let i = index" class="date-container padding-m selectable"
+        [ngClass]="{'selected' : selectedProject.name === projects[i].name}"
+        (click)="slideTo(i)">
+        <span>{{project.dateTo | date: 'y'}} - {{project.dateFrom | date: 'y'}}</span>
+      </div>
+    </ion-item>
   </div>
 </ion-header>
 <div id="slides-container" fxLayout="row none">

@@ -2,7 +2,7 @@ import { ProjectService, projectTypes } from './../../services/project-service.t
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Project } from 'src/app/classes/project';
 import { SlideOpts } from 'src/app/classes/slideOpts';
-import { IonSlides, IonSegment } from '@ionic/angular';
+import { IonSlides, IonSegment, IonRange } from '@ionic/angular';
 
 @Component({
   selector: 'app-project-view',
@@ -63,15 +63,23 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
     if (this.slides) {
       return this.slides.getActiveIndex().then((index: number) => {
         this.slidesIndex = index;
+        this.setSelectedProject(this.slidesIndex);
       })
     }
   }
 
   public slideChanged() {
     this.updateActiveIndex().then(() => {
-
-      this.selectedProject = this.projects[this.slidesIndex];
+      this.setSelectedProject(this.slidesIndex);
     });
   }
-  // TODO REPLACE THE TABS WITH A TIMELINE, AND SIMPLY "TAG" EACH OBJECT AS BEING EXPERIENCE OR EDUCATION ETC
+  public setSelectedProject(index: number) {
+    this.selectedProject = this.projects[index] ? this.projects[index] : this.selectedProject;
+  }
+
+  public slideTo(slideIndex: number) {
+    if (this.slides && this.projects[slideIndex]) {
+      this.slides.slideTo(slideIndex);
+    }
+  }
 }
