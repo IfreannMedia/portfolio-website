@@ -1,0 +1,26 @@
+<div class="container">
+  <h5>Technologies I like:</h5>
+  <div class="features-inner section-inner has-bottom-divider">
+    <div class="features-wrap">
+      <!-- <div class="feature text-center is-revealing">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="../../assets/template/feature-icon-01.svg" alt="Feature 01">
+          </div>
+          <h4 class="feature-title mt-24">Angular</h4>
+          <p class="text-sm mb-0">Multiple enterprise scale web applications developed using a variety of Angular versions, as well as private projects.</p>
+        </div>
+      </div>
+
+      </div> -->
+
+      <div *ngFor="let tech of myTechs"
+      class="feature text-center is-revealing">
+        <div class="feature-inner">
+          <h4 class="feature-title mt-24" (mousemove)="setBorderColour($event)">{{tech}}</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
