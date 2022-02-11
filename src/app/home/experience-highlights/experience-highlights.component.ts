@@ -1,4 +1,4 @@
-import { DummyDataService } from './../services/dummy-data.service';
+import { DummyDataService } from '../../services/dummy-data.service';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 
 @Component({

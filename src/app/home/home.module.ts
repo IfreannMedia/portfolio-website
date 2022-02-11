@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { LandingBlockComponent } from '../landing-block/landing-block.component';
 import { ArtisticElementsComponent } from '../artistic-elements/artistic-elements.component';
-import { ExperienceHighlightsComponent } from '../experience-highlights/experience-highlights.component';
+import { ExperienceHighlightsComponent } from './experience-highlights/experience-highlights.component';
 import { ProjectHighlightsComponent } from '../project-highlights/project-highlights.component';
 
 
@@ -14,7 +14,7 @@ import { ProjectHighlightsComponent } from '../project-highlights/project-highli
     LandingBlockComponent,
     ArtisticElementsComponent,
     ExperienceHighlightsComponent,
-    ProjectHighlightsComponent
+    ProjectHighlightsComponent,
   ],
   imports: [
     CommonModule,
