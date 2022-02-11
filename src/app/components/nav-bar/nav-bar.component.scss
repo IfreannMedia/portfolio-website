@@ -8,10 +8,11 @@
   align-content: center;
   position: fixed;
   top: 0;
-  background-color: #21242B;
+  background-color: #21242b;
   font-size: 25px;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   box-shadow: 0px 3px 9px 1px rgb(0 0 0 / 51%);
+  max-width: 100%;
 }
 
 .container .list {
