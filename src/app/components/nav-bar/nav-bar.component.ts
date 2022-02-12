@@ -12,4 +12,8 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  public navigateTo(url: string): void {
+    window.open(url, "_blank");
+  }
 }
