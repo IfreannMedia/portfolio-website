@@ -6,13 +6,17 @@
   padding: 20px;
   position: fixed;
   top: 0;
-  box-shadow: 0px 3px 9px 1px rgb(0 0 0 / 51%);
   max-width: 100%;
   background-color: $nav-background;
 
   display: flex;
   justify-content: space-between;
-
+  &.shadow {
+    box-shadow: 0px 3px 9px 1px rgb(0 0 0 / 51%);
+  }
+  &.transparent {
+    opacity: 0.9;
+  }
   .flex-container {
     display: flex;
     flex-direction: row;
