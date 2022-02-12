@@ -33,8 +33,14 @@
             "styles": [
               "src/styles/styles.scss",
               "src/styles/scrollbar.scss",
+              "src/styles/colours.scss",
               "src/styles/template/style.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles/"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
