@@ -1,26 +1,22 @@
-<div class="container">
-  <h5>Technologies I like:</h5>
-  <div class="features-inner section-inner">
-    <div class="features-wrap">
-      <!-- <div class="feature text-center is-revealing">
-        <div class="feature-inner">
-          <div class="feature-icon">
-            <img src="../../assets/template/feature-icon-01.svg" alt="Feature 01">
-          </div>
-          <h4 class="feature-title mt-24">Angular</h4>
-          <p class="text-sm mb-0">Multiple enterprise scale web applications developed using a variety of Angular versions, as well as private projects.</p>
-        </div>
+<div class="experiences-main">
+  <div class="card" *ngFor="let unit of experiences">
+    <div class="exp-header">
+      <h4 class="title">{{unit.title}}</h4>
+      <div class="dates">
+        <p>{{unit.dateFrom | date : "dd/MM/yy"}}</p>
+        <p>{{unit.dateTo | date: "dd/MM/yy"}}</p>
       </div>
+    </div>
+    <p>{{unit.description}}</p>
+    <div class="skill-container">
+      <p class="skill mt-24" *ngFor="let skill of unit.skills" (mousemove)="setBorderColour($event)">{{skill}}</p>
+    </div>
 
-      </div> -->
-
-      <div *ngFor="let tech of myTechs"
+  </div>
+</div>
+<!-- <div *ngFor="let tech of myTechs"
       class="feature text-center is-revealing">
         <div class="feature-inner">
           <h4 class="feature-title mt-24" (mousemove)="setBorderColour($event)">{{tech}}</h4>
         </div>
-      </div>
-
-    </div>
-  </div>
-</div>
+      </div> -->

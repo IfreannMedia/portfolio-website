@@ -1,3 +1,4 @@
+import { Experience } from './../../classes/experience';
 import { DummyDataService } from '../../services/dummy-data.service';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 
@@ -10,11 +11,13 @@ export class ExperienceHighlightsComponent implements OnInit {
 
   myTechs: string[] = [];
 
+  public experiences: Experience[] = [];
   constructor(private dummyData: DummyDataService) { }
 
 
   ngOnInit(): void {
     this.myTechs = this.dummyData.getMyTechs();
+    this.experiences = this.dummyData.getExperiences();
   }
 
   public setBorderColour(event: Event) {

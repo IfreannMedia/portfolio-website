@@ -16,11 +16,10 @@ import { FooterComponent } from './footer/footer.component';
     ArtisticElementsComponent,
     ExperienceHighlightsComponent,
     ProjectHighlightsComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
-    CommonModule,
-  ],
+    CommonModule  ],
   exports: [HomePageComponent]
 })
 export class HomeModule { }
