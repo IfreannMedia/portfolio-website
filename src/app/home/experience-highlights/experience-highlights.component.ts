@@ -1,7 +1,7 @@
-import { Experience } from './../../classes/experience';
+import { Component, OnInit } from '@angular/core';
 import { DummyDataService } from '../../services/dummy-data.service';
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
-
+import { Experience } from './../../classes/experience';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-experience-highlights',
   templateUrl: './experience-highlights.component.html',
@@ -9,15 +9,27 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren }
 })
 export class ExperienceHighlightsComponent implements OnInit {
 
-  myTechs: string[] = [];
   public nowDate: Date = new Date(Date.now());
 
   public experiences: Experience[] = [];
+
+
+  customOptions: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    nav: true,
+    items: 1
+  }
+
   constructor(private dummyData: DummyDataService) { }
 
 
   ngOnInit(): void {
-    this.myTechs = this.dummyData.getMyTechs();
     this.experiences = this.dummyData.getExperiences();
   }
 

@@ -6,10 +6,16 @@ import { ArtisticElementsComponent } from '../artistic-elements/artistic-element
 import { ExperienceHighlightsComponent } from './experience-highlights/experience-highlights.component';
 import { ProjectHighlightsComponent } from '../components/project-highlights/project-highlights.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 
 
 @NgModule({
+  imports: [
+    CommonModule,
+    CarouselModule
+  ],
   declarations: [
     HomePageComponent,
     LandingBlockComponent,
@@ -18,8 +24,6 @@ import { FooterComponent } from './footer/footer.component';
     ProjectHighlightsComponent,
     FooterComponent
   ],
-  imports: [
-    CommonModule  ],
   exports: [HomePageComponent]
 })
 export class HomeModule { }
