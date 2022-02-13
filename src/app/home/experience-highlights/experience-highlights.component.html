@@ -1,7 +1,7 @@
 <div class="experiences-main" id="experience-section">
   <h5 class="hint">Here are some snippets regarding my work as a software developer.</h5>
 
-  <owl-carousel-o [options]="customOptions">
+  <owl-carousel-o [options]="cardOptions">
     <ng-template carouselSlide *ngFor="let unit of experiences">
       <div class="card" >
         <div class="exp-header">
@@ -12,9 +12,18 @@
           </div>
         </div>
         <p>{{unit.description}}</p>
-        <div class="skill-container">
-          <p class="skill mt-24" *ngFor="let skill of unit.skills" (mousemove)="setBorderColour($event)">{{skill}}</p>
-        </div>
+        <!-- <div class="skill-container">
+          <owl-carousel-o [options]="skillsOptions">
+            <ng-template carouselSlide *ngFor="let skill of unit.skills">
+              <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>
+            </ng-template>
+          </owl-carousel-o>
+        </div> -->
+        <owl-carousel-o class="skill-container" [options]="skillsOptions">
+          <ng-template carouselSlide *ngFor="let skill of unit.skills">
+            <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>
+          </ng-template>
+        </owl-carousel-o>
 
       </div>
     </ng-template>

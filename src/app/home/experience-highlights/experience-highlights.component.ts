@@ -14,7 +14,7 @@ export class ExperienceHighlightsComponent implements OnInit {
   public experiences: Experience[] = [];
 
 
-  customOptions: OwlOptions = {
+  cardOptions: OwlOptions = {
     loop: false,
     mouseDrag: true,
     touchDrag: true,
@@ -22,8 +22,20 @@ export class ExperienceHighlightsComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
-    nav: true,
+    nav: false,
     items: 1
+  }
+
+  skillsOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    nav: false,
+    items: 5
   }
 
   constructor(private dummyData: DummyDataService) { }
