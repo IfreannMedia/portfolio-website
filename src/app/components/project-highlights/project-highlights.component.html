@@ -8,13 +8,17 @@
           <h4 class="title">{{project.name}}</h4>
         </div>
         <div class="img-desc">
-          <div class="img-container">
-            <img src="../../../assets/images/cyber_ryder_cover.png" />
+          <div *ngIf="project.imageUrl" class="img-container">
+            <img src="{{project.imageUrl}}" />
           </div>
           <p>{{project.description}}</p>
 
         </div>
-        <a *ngIf="project.accessUrl" href="{{project.accessUrl}}" target="_blank">Try it out</a>
+        <div class="links">
+          <a *ngIf="project.accessUrl" href="{{project.accessUrl}}" target="_blank">Try it out</a>
+          <img *ngIf="project.githubUrl" class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="openGithub(project.githubUrl)" />
+        </div>
+
         <!-- <owl-carousel-o class="skill-container" [options]="skillsOptions">
           <ng-template carouselSlide *ngFor="let skill of unit.skills">
             <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>

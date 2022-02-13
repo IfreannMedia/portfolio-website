@@ -7,15 +7,20 @@
   flex-shrink: 0;
 }
 
+.card {
+  .header {
+    .title {
+      margin-bottom: 5px;
+    }
+  }
+}
 .img-desc {
   display: flex;
   align-items: flex-start;
+  img {
+    padding-right: 15px;
+  }
   p {
-    padding: 15px;
     align-self: flex-start;
   }
 }
-// img {
-//   height: 100px;
-//   width: 100px;
-// }

@@ -4,8 +4,8 @@ export class Project {
   public description: string = ""
   public technologiesUsed: string[] = [];
   public projectType: string = ''
-  public imageSource?: string;
-  public githubLink?: string;
+  public imageUrl?: string;
+  public githubUrl?: string;
   public accessUrl?: string;
   constructor() {
   }

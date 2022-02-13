@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'colours';
+
+.clickable:hover {
+  cursor: pointer;
+  color: $highlight !important;
+}
+
+img.clickable:hover {
+  filter: invert(58%) sepia(100%) saturate(392%) hue-rotate(90deg) brightness(105%) contrast(94%);
+}
+
+img.icon {
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    min-width: 25px;
+    filter: invert(100%);
+}

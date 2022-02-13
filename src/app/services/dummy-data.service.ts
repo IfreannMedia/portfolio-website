@@ -265,12 +265,20 @@ export class DummyDataService {
 
   public projects: Project[] = [
     {
+      name: "Portfolio site",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+      technologiesUsed: [""],
+      projectType: "",
+      imageUrl: "",
+      githubUrl: "https://github.com/IfreannMedia/portfolio-website"
+    },
+    {
       name: "Chuck Norris Joke Machine",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
       technologiesUsed: [""],
       projectType: "",
-      imageSource: "",
-      githubLink: "",
+      imageUrl: "",
+      githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/invasion",
     },
     {
@@ -278,8 +286,8 @@ export class DummyDataService {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
       technologiesUsed: [""],
       projectType: "",
-      imageSource: "",
-      githubLink: "",
+      imageUrl: "",
+      githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/invasion",
     },
     {
@@ -287,8 +295,8 @@ export class DummyDataService {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
       technologiesUsed: [""],
       projectType: "",
-      imageSource: "",
-      githubLink: "",
+      imageUrl: "",
+      githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/invasion",
     },
     {
@@ -296,8 +304,8 @@ export class DummyDataService {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
       technologiesUsed: [""],
       projectType: "",
-      imageSource: "",
-      githubLink: "",
+      imageUrl: "../../../assets/images/cyber_ryder_cover.png",
+      githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/cyber-ryder",
     },
     {
@@ -305,8 +313,8 @@ export class DummyDataService {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
       technologiesUsed: [""],
       projectType: "",
-      imageSource: "",
-      githubLink: "",
+      imageUrl: "",
+      githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/demonic-five",
     },
   ];

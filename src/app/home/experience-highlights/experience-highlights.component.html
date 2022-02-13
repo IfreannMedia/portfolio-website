@@ -4,7 +4,7 @@
   <owl-carousel-o id="card-slider" [options]="cardOptions">
     <ng-template carouselSlide *ngFor="let unit of experiences">
       <div class="card" >
-        <div class="exp-header">
+        <div class="header">
           <h4 class="title">{{unit.title}}</h4>
           <div class="dates">
             <p>{{unit.dateFrom | date : "dd/MM/yy"}}</p>

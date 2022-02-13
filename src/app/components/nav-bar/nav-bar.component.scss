@@ -63,22 +63,12 @@
     flex-basis: 150px;
     justify-content: flex-end;
     img {
-      width: 25px;
-      height: 25px;
-      max-width: 25px;
-      min-width: 25px;
-      filter: invert(100%);
       margin-left: 15px;
-      filter: invert(100%);
-    }
-
-    img:hover {
-      filter: invert(58%) sepia(100%) saturate(392%) hue-rotate(90deg) brightness(105%) contrast(94%);
     }
   }
 
-  .clickable:hover {
-    cursor: pointer;
-    color: $highlight !important;
-  }
+  // .clickable:hover {
+  //   cursor: pointer;
+  //   color: $highlight !important;
+  // }
 }

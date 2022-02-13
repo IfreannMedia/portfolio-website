@@ -32,4 +32,8 @@ export class ProjectHighlightsComponent implements OnInit {
     this.projects = this.dummyData.getProjects();
   }
 
+  openGithub(link: string){
+    window.open(link, "_blank");
+  }
+
 }
