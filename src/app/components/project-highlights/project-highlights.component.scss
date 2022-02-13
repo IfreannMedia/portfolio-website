@@ -1,0 +1,21 @@
+@import "colours";
+@import "slideshow";
+
+.img-container {
+  height: 200px !important;
+  width: 200px !important;
+  flex-shrink: 0;
+}
+
+.img-desc {
+  display: flex;
+  align-items: flex-start;
+  p {
+    padding: 15px;
+    align-self: flex-start;
+  }
+}
+// img {
+//   height: 100px;
+//   width: 100px;
+// }

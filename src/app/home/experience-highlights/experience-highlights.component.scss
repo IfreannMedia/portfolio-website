@@ -1,51 +1,6 @@
 @import "colours";
-.experiences-main {
-  position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+@import "slideshow";
 
-  .hint {
-
-  }
-  .card {
-    // flex-basis: 100%;
-    // flex-grow: 1;
-    // flex-shrink: 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 15px;
-    color: $font-two;
-    background-color: $background-three;
-  }
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .exp-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .title {
-      padding: 0;
-      margin: 0;
-    }
-    .dates {
-      display: flex;
-      flex-grow: 0.1;
-      justify-content: space-around;
-      p {
-        margin: 0;
-        padding: 0;
-      }
-    }
-  }
-}
 .skill-container {
   width: 100%;
   height: 100%;

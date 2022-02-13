@@ -39,7 +39,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
   }
 
   public scrollToView(elementId: string): void {
-    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   public scrollToTop(): void {
