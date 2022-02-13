@@ -16,14 +16,15 @@ export class ExperienceHighlightsComponent implements OnInit {
 
   cardOptions: OwlOptions = {
     loop: false,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
-    nav: false,
-    items: 1
+    nav: true,
+    items: 1,
+    startPosition: 0
   }
 
   skillsOptions: OwlOptions = {
@@ -33,9 +34,13 @@ export class ExperienceHighlightsComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: ['', ''],
+    navText: ['&#8249', '&#8250;'],
     nav: false,
-    items: 5
+    items: 5,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1500,
+    autoplayHoverPause:true
   }
 
   constructor(private dummyData: DummyDataService) { }

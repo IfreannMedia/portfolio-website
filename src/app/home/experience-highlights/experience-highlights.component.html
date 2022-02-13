@@ -1,14 +1,14 @@
 <div class="experiences-main" id="experience-section">
   <h5 class="hint">Here are some snippets regarding my work as a software developer.</h5>
 
-  <owl-carousel-o [options]="cardOptions">
+  <owl-carousel-o id="card-slider" [options]="cardOptions">
     <ng-template carouselSlide *ngFor="let unit of experiences">
       <div class="card" >
         <div class="exp-header">
           <h4 class="title">{{unit.title}}</h4>
           <div class="dates">
             <p>{{unit.dateFrom | date : "dd/MM/yy"}}</p>
-            <p>{{unit.current ? "current" : unit.dateTo| date: "dd/MM/yy"}}</p>
+            <p>{{unit.current ? "CURRENT" : unit.dateTo| date: "dd/MM/yy"}}</p>
           </div>
         </div>
         <p>{{unit.description}}</p>
