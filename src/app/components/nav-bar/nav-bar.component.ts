@@ -27,13 +27,11 @@ export class NavBarComponent implements OnInit, OnDestroy {
   }
 
   private addStyling(event: Event): void {
-    console.log(event);
     const scrollingEl: Element | null = (event.target as Document).scrollingElement;
-    if (!this.navbar || (!event || !scrollingEl))
+    if (!this.navbar || (!event || !event.target || !scrollingEl))
       return;
     const scrollTopVal: number = scrollingEl.scrollTop;
     if (scrollTopVal > 0) {
-      debugger;
       this.navbar.nativeElement.classList.add("shadow");
     } else {
       this.navbar.nativeElement.classList.remove("shadow");

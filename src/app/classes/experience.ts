@@ -4,4 +4,5 @@ export class Experience {
   public skills: string[] = [];
   public dateFrom: Date = new Date();
   public dateTo: Date = new Date();
+  public current?: boolean;
 }

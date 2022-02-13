@@ -10,6 +10,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren }
 export class ExperienceHighlightsComponent implements OnInit {
 
   myTechs: string[] = [];
+  public nowDate: Date = new Date(Date.now());
 
   public experiences: Experience[] = [];
   constructor(private dummyData: DummyDataService) { }
@@ -20,6 +21,7 @@ export class ExperienceHighlightsComponent implements OnInit {
     this.experiences = this.dummyData.getExperiences();
   }
 
+  // TODO remove?
   public setBorderColour(event: Event) {
     if (event && event.target) {
       const target: HTMLElement = event.target as HTMLElement;
