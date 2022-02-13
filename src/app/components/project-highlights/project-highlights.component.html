@@ -14,16 +14,21 @@
           <p>{{project.description}}</p>
 
         </div>
-        <div class="links">
-          <a *ngIf="project.accessUrl" href="{{project.accessUrl}}" target="_blank">Try it out</a>
-          <img *ngIf="project.githubUrl" class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="openGithub(project.githubUrl)" />
+        <div class="bottom-area">
+          <div class="links">
+            <a *ngIf="project.accessUrl" class="clickable" href="{{project.accessUrl}}" target="_blank">Try it out</a>
+            <img *ngIf="project.githubUrl" class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="openGithub(project.githubUrl)" />
+          </div>
+
+          <div class="slider-container">
+            <owl-carousel-o class="skill-container" [options]="skillsOptions">
+              <ng-template carouselSlide *ngFor="let skill of project.technologiesUsed">
+                <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
         </div>
 
-        <!-- <owl-carousel-o class="skill-container" [options]="skillsOptions">
-          <ng-template carouselSlide *ngFor="let skill of unit.skills">
-            <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>
-          </ng-template>
-        </owl-carousel-o> -->
 
       </div>
     </ng-template>

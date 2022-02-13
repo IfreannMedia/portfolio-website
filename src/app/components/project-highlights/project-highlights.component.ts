@@ -36,4 +36,35 @@ export class ProjectHighlightsComponent implements OnInit {
     window.open(link, "_blank");
   }
 
+
+  skillsOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['&#8249', '&#8250;'],
+    nav: false,
+    items: 3,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1500,
+    autoplayHoverPause:true
+  }
+  // TODO remove?
+  public setBorderColour(event: Event) {
+    if (event && event.target) {
+      const target: HTMLElement = event.target as HTMLElement;
+      // @ts-ignore
+      const x = event.pageX - target.offsetLeft
+      // @ts-ignore
+      const y = event.pageY - target.offsetTop
+
+
+      target.style.setProperty('--x', `${x}px`)
+      target.style.setProperty('--y', `${y}px`)
+    }
+  }
+
 }

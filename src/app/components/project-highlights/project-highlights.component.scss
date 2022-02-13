@@ -24,3 +24,14 @@
     align-self: flex-start;
   }
 }
+
+.bottom-area {
+  display: flex;
+  justify-content: space-between;
+
+  .slider-container {
+
+    align-self: flex-end;
+    width: 55%;
+  }
+}
