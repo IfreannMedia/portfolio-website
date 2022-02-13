@@ -37,4 +37,13 @@ export class NavBarComponent implements OnInit, OnDestroy {
       this.navbar.nativeElement.classList.remove("shadow");
     }
   }
+
+  public scrollToView(elementId: string): void {
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  public scrollToTop(): void {
+    //@ts-ignore
+    	document.scrollingElement?.scrollTop = 0;
+    }
 }
