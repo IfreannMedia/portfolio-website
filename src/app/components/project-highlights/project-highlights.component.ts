@@ -20,7 +20,6 @@ export class ProjectHighlightsComponent implements OnInit {
     pullDrag: false,
     dots: false,
     navSpeed: 700,
-    navText: ['', ''],
     nav: true,
     items: 1,
     startPosition: 0
@@ -44,7 +43,6 @@ export class ProjectHighlightsComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: ['&#8249', '&#8250;'],
     nav: false,
     items: 3,
     margin:10,

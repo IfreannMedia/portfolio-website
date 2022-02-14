@@ -1,4 +1,4 @@
-@import 'colours';
+@import "colours";
 
 .main-slideshow-container {
   position: relative;
@@ -8,7 +8,6 @@
   padding-bottom: 20px;
 
   .hint {
-
   }
   .card {
     // flex-basis: 100%;
@@ -43,6 +42,27 @@
       p {
         margin: 0;
         padding: 0;
+      }
+    }
+  }
+
+  .owl-carousel {
+    .owl-nav {
+      [class*=owl-] {
+        width: 100px;
+        background-color: $background-three;
+        font-size: medium;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
+
+      [class*=owl-]:hover:not(.disabled) {
+        background-color: $background-one;
+        color: $highlight;
+      }
+
+      [class*=owl-].disabled:hover {
+        background-color: $background-three;
       }
     }
   }
