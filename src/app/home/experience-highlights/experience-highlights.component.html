@@ -5,10 +5,13 @@
     <ng-template carouselSlide *ngFor="let unit of experiences">
       <div class="card" >
         <div class="header">
-          <h4 class="title">{{unit.title}}</h4>
+          <div class="title-container">
+           <h4 class="title">{{unit.title}}</h4>
+          <p class="location" *ngIf="unit.location">{{unit.location}}</p>
+         </div>
           <div class="dates">
-            <p>{{unit.dateFrom | date : "dd/MM/yy"}}</p>
-            <p>{{unit.current ? "CURRENT  " : unit.dateTo| date: "dd/MM/yy"}}</p>
+            <p>{{unit.dateFrom | date : "dd/MM/yy"}}</p><p> - </p>
+            <p>{{unit.current ? "CURRENT" : unit.dateTo| date: "dd/MM/yy"}}</p>
           </div>
         </div>
         <p>{{unit.description}}</p>

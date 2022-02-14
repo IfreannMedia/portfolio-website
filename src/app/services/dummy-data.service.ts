@@ -104,10 +104,11 @@ export class DummyDataService {
         "Aside from feature development, my tasks included migrating two Angular frontends to the latest marjor version, at the time 13.x.x, and then integrating the smaller " +
         "of the frontends into the larger one. I also worked extensively across the entire tech stack, from frontend to backend to CI/CD and OPS. " +
         "Business communications were primarily carried out in German, and I had the pleasure of working with excellent colleagues.",
-      skills: [SKILLS.ANGULAR, SKILLS.TYPESCRIPT, SKILLS.JAVA_EE, SKILLS.SPRINGBOOT, SKILLS.POSTGRESQL, SKILLS.JENKINS, SKILLS.BITBUCKET,
+      skills: [SKILLS.ANGULAR, SKILLS.TYPESCRIPT, SKILLS.JAVA_EE, SKILLS.SPRINGBOOT, SKILLS.POSTGRESQL, SKILLS.JENKINS,
       SKILLS.SONAR, SKILLS.SSH, SKILLS.GLASSFISH, SKILLS.PAYARA, SKILLS.ITSM, SKILLS.JIRA, SKILLS.BITBUCKET, SKILLS.CONFLUENCE],
       dateFrom: new Date('2021-10-01'),
       dateTo: new Date(Date.now()),
+      location: "Munich",
       current: true
     },
     {
@@ -117,10 +118,11 @@ export class DummyDataService {
         "countries. As well as planning and developing features, I had the honour of migrating the frontend from Angular 5 to Angular 11. Soon after I began work " +
         "as a full stack developer on a large scale web portal for materials and tools management built with Liferay. " +
         "Business communications were primarily carried out in German, I got to work with some excellent colleagues too.",
-      skills: [SKILLS.ANGULAR, SKILLS.TYPESCRIPT, SKILLS.IONIC, SKILLS.XCODE, SKILLS.JAVA_EE, SKILLS.ORACLE_SQL, SKILLS.JENKINS, SKILLS.BITBUCKET,
+      skills: [SKILLS.ANGULAR, SKILLS.TYPESCRIPT, SKILLS.IONIC, SKILLS.XCODE, SKILLS.JAVA_EE, SKILLS.ORACLE_SQL, SKILLS.JENKINS,
       SKILLS.SONAR, SKILLS.SSH, SKILLS.GLASSFISH, SKILLS.ITSM, SKILLS.JIRA, SKILLS.BITBUCKET, SKILLS.CONFLUENCE],
       dateFrom: new Date('2019-04-01'),
       dateTo: new Date('2021-09-30'),
+      location: "Munich"
     }
   ];
 

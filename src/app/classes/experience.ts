@@ -7,4 +7,5 @@ export class Experience {
   public dateFrom: Date = new Date();
   public dateTo: Date = new Date();
   public current?: boolean;
+  public location: string = "";
 }
