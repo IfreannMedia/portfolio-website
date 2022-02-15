@@ -148,7 +148,8 @@ export class DummyDataService {
     },
     {
       name: "Smart Brain Image Scan",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+      description: "I decided to give React a test drive and used it to create this web app. The backend was built using express, and the app allows users to create accounts utilize " +
+      "a face recognition API on pictures to detect faces.",
       technologiesUsed: [SKILLS.REACT, SKILLS.EXPRESS, SKILLS.POSTGRESQL, SKILLS.HTML, SKILLS.JAVASCRIPT, SKILLS.CSS],
       projectType: "",
       imageUrl: "../../../assets/images/face_recog.png",
@@ -157,17 +158,19 @@ export class DummyDataService {
     },
     {
       name: "Invasion",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-      technologiesUsed: [],
+      description: "Invasion is a 3D shoot em up game I designed and developed using the Unity engine and C#. It was the final deliverable for my MSc. I programmed the player character, all mecchanics and UIs, the scoring system, " +
+      "level management, and the enemy AI. I also created the 3D modely in blender, and animated the player character. Not just coding, but plenty of UX went into the iterative prototyping and development of this artefact" +
+      "of the game.",
+      technologiesUsed: [SKILLS.UNITY, SKILLS.C_SHARP],
       projectType: "",
-      imageUrl: "",
+      imageUrl: "../../../assets/images/invasion_cover.png",
       githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/invasion",
     },
     {
       name: "Cyber Ryder",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-      technologiesUsed: [],
+      description: "Cyber Ryder is a 3D cyber themed racing game I developed as a mini-project during my masters.",
+      technologiesUsed: [SKILLS.UNITY, SKILLS.C_SHARP],
       projectType: "",
       imageUrl: "../../../assets/images/cyber_ryder_cover.png",
       githubUrl: "",
@@ -175,10 +178,10 @@ export class DummyDataService {
     },
     {
       name: "Demonic 5",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-      technologiesUsed: [],
+      description: "Demonic 5 was a 2D narrative/turn based combat game I developed using the unity game engine, the fungus dialogue system and C#.",
+      technologiesUsed: [SKILLS.UNITY, SKILLS.C_SHARP],
       projectType: "",
-      imageUrl: "",
+      imageUrl: "../../../assets/images/demonic_five_cover.png",
       githubUrl: "",
       accessUrl: "https://ifreannmedia.itch.io/demonic-five",
     },

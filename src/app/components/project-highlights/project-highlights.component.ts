@@ -65,4 +65,9 @@ export class ProjectHighlightsComponent implements OnInit {
     }
   }
 
+  public getSkillsOwlOptions(project: Project): OwlOptions {
+    this.skillsOptions.loop = Boolean(this.skillsOptions.items && project.technologiesUsed.length > this.skillsOptions.items);
+    return this.skillsOptions;
+  }
+
 }

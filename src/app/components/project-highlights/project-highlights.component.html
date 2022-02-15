@@ -21,7 +21,7 @@
           </div>
 
           <div class="slider-container">
-            <owl-carousel-o class="skill-container" [options]="skillsOptions">
+            <owl-carousel-o class="skill-container" [options]="getSkillsOwlOptions(project)">
               <ng-template carouselSlide *ngFor="let skill of project.technologiesUsed">
                 <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>
               </ng-template>
