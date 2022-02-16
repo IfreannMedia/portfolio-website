@@ -7,6 +7,7 @@ import { ExperienceHighlightsComponent } from './experience-highlights/experienc
 import { ProjectHighlightsComponent } from '../components/project-highlights/project-highlights.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -22,7 +23,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ArtisticElementsComponent,
     ExperienceHighlightsComponent,
     ProjectHighlightsComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   exports: [HomePageComponent]
 })

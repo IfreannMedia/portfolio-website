@@ -196,27 +196,4 @@ export class DummyDataService {
   getProjects(): Project[] {
     return this.projects;
   }
-
-  getMyTechs() {
-    return [
-      "Angular",
-      "Springboot",
-      "Maven",
-      "Node",
-      "Typescript",
-      "Java",
-      "Javascript",
-      "Unity",
-      "C#",
-      "Rxjs",
-      "HTML",
-      "CSS",
-      "SCSS/SASS",
-      "SQL",
-      "Postgresql",
-      "PgAdmin",
-      "CI/CD",
-      "Git"
-    ];
-  }
 }
