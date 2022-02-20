@@ -5,11 +5,17 @@
 }
 
 .card {
+  height: 350px;
   .header {
     .title {
       margin-bottom: 5px;
     }
   }
+
+  .skill-container {
+    align-items: center;
+  }
+
 }
 .img-desc {
   display: flex;
@@ -25,6 +31,7 @@
 .bottom-area {
   display: flex;
   justify-content: space-between;
+  height: 90%;
 
   .slider-container {
     align-self: flex-end;
@@ -32,10 +39,15 @@
   }
 
   .links {
-    min-width: 80px;
+    display: flex;
+    min-width: 200px;
+    align-self: end;
   }
   .github-urls {
     display: flex;
     justify-content: space-between;
+    img {
+      margin-right: 25px;
+    }
   }
 }
