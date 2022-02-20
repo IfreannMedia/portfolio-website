@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'colours';
+@import 'scrollbar';
+@import 'slideshow';
+@import 'card';
 
 .clickable:hover {
   cursor: pointer;
