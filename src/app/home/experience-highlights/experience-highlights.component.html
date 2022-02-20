@@ -23,8 +23,8 @@
           </owl-carousel-o>
         </div> -->
         <owl-carousel-o class="skill-container" [options]="skillsOptions">
-          <ng-template carouselSlide *ngFor="let skill of unit.skills">
-            <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill}}</p>
+          <ng-template carouselSlide *ngFor="let skill of unit.technologiesUsed">
+            <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill.name}}</p>
           </ng-template>
         </owl-carousel-o>
 
