@@ -30,4 +30,12 @@
     align-self: flex-end;
     width: 55%;
   }
+
+  .links {
+    min-width: 80px;
+  }
+  .github-urls {
+    display: flex;
+    justify-content: space-between;
+  }
 }

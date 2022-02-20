@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DummyDataService } from '../../services/dummy-data.service';
-import { Experience } from './../../classes/experience';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Experience } from './../../classes/experience';
+import { HomeService } from './../../services/home.service';
 @Component({
   selector: 'app-experience-highlights',
   templateUrl: './experience-highlights.component.html',
@@ -35,17 +35,25 @@ export class ExperienceHighlightsComponent implements OnInit {
     navSpeed: 700,
     nav: false,
     items: 5,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:1500,
-    autoplayHoverPause:true
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true
   }
 
-  constructor(private dummyData: DummyDataService) { }
+  constructor(private homeService: HomeService) { }
 
 
   ngOnInit(): void {
-    this.experiences = this.dummyData.getExperiences();
+    this.getExperiences();
+  }
+
+  private getExperiences(): void {
+    this.homeService.getExperiences().subscribe({
+      next: (Experiences: Experience[]) => {
+        this.experiences = Experiences;
+      }
+    })
   }
 
   // TODO remove?

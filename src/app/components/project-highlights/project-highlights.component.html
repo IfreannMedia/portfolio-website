@@ -17,7 +17,10 @@
         <div class="bottom-area">
           <div class="links">
             <a *ngIf="project.accessUrl" class="clickable" href="{{project.accessUrl}}" target="_blank">Try it out</a>
-            <img *ngIf="project.githubUrl" class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="openGithub(project.githubUrl)" />
+            <div class="github-urls" *ngIf="project.githubUrls && project.githubUrls.length">
+              <img *ngFor="let link of project.githubUrls" class="clickable icon"
+                src="../../../assets/icons/logos/github.svg" (click)="openGithub(link)" />
+            </div>
           </div>
 
           <div class="slider-container">

@@ -5,7 +5,7 @@ export class Project {
   public technologiesUsed: string[] = [];
   public projectType: string = ''
   public imageUrl?: string;
-  public githubUrl?: string;
+  public githubUrls?: string[];
   public accessUrl?: string;
   constructor() {
   }

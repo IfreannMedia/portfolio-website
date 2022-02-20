@@ -1,5 +1,5 @@
+import { HomeService } from './../../services/home.service';
 import { Project } from './../../classes/project';
-import { DummyDataService } from './../../services/dummy-data.service';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -25,13 +25,20 @@ export class ProjectHighlightsComponent implements OnInit {
     startPosition: 0
   }
 
-  constructor(private dummyData: DummyDataService) { }
+  constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    this.projects = this.dummyData.getProjects();
+    this.getProjects();
+  }
+  private getProjects() {
+    this.homeService.getProjects().subscribe({
+      next: (projects: Project[]) => {
+        this.projects = projects;
+      }
+    });
   }
 
-  openGithub(link: string){
+  openGithub(link: string) {
     window.open(link, "_blank");
   }
 
@@ -45,10 +52,10 @@ export class ProjectHighlightsComponent implements OnInit {
     navSpeed: 700,
     nav: false,
     items: 3,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:1500,
-    autoplayHoverPause:true
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true
   }
   // TODO remove?
   public setBorderColour(event: Event) {
