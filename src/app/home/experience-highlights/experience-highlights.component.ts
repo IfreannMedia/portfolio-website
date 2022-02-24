@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
 import { Experience } from './../../classes/experience';
 import { HomeService } from './../../services/home.service';
+import { ResponsiveQueryService } from './../../services/responsive-query.service';
 @Component({
   selector: 'app-experience-highlights',
   templateUrl: './experience-highlights.component.html',
@@ -9,10 +10,13 @@ import { HomeService } from './../../services/home.service';
 })
 export class ExperienceHighlightsComponent implements OnInit {
 
+  @ViewChildren('expCard') viewChildren!: QueryList<any>;
+
+  @ViewChild('owl') owl!: CarouselComponent;
+
   public nowDate: Date = new Date(Date.now());
 
   public experiences: Experience[] = [];
-
 
   cardOptions: OwlOptions = {
     loop: false,
@@ -23,26 +27,11 @@ export class ExperienceHighlightsComponent implements OnInit {
     navSpeed: 700,
     nav: true,
     items: 1,
-    startPosition: 0
-  }
-
-  skillsOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 700,
-    nav: false,
-    items: 5,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 1500,
-    autoplayHoverPause: true
+    startPosition: 0,
+    autoHeight: true
   }
 
   constructor(private homeService: HomeService) { }
-
 
   ngOnInit(): void {
     this.getExperiences();
@@ -54,20 +43,5 @@ export class ExperienceHighlightsComponent implements OnInit {
         this.experiences = Experiences;
       }
     })
-  }
-
-  // TODO remove?
-  public setBorderColour(event: Event) {
-    if (event && event.target) {
-      const target: HTMLElement = event.target as HTMLElement;
-      // @ts-ignore
-      const x = event.pageX - target.offsetLeft
-      // @ts-ignore
-      const y = event.pageY - target.offsetTop
-
-
-      target.style.setProperty('--x', `${x}px`)
-      target.style.setProperty('--y', `${y}px`)
-    }
   }
 }

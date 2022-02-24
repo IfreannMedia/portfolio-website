@@ -1,3 +1,4 @@
+import { ResponsiveQueryService } from './../../services/responsive-query.service';
 import { HomeService } from './../../services/home.service';
 import { Project } from './../../classes/project';
 import { Component, OnInit } from '@angular/core';
@@ -12,6 +13,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class ProjectHighlightsComponent implements OnInit {
 
   public projects: Project[] = [];
+  public showImage = true;
 
   cardOptions: OwlOptions = {
     loop: false,
@@ -22,12 +24,15 @@ export class ProjectHighlightsComponent implements OnInit {
     navSpeed: 700,
     nav: true,
     items: 1,
-    startPosition: 0
+    startPosition: 0,
+    autoHeight: true
   }
 
-  constructor(private homeService: HomeService) { }
+  constructor(private homeService: HomeService,
+              private responsiveService: ResponsiveQueryService) { }
 
   ngOnInit(): void {
+    this.showImage = !this.responsiveService.isSmall();
     this.getProjects();
   }
   private getProjects() {

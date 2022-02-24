@@ -1,0 +1,5 @@
+<owl-carousel-o class="skill-container" [options]="skillsOptions">
+  <ng-template carouselSlide *ngFor="let skill of skills">
+    <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill.name}}</p>
+  </ng-template>
+</owl-carousel-o>

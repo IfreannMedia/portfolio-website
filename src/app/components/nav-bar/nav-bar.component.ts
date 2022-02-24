@@ -1,3 +1,4 @@
+import { ResponsiveQueryService } from './../../services/responsive-query.service';
 import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -9,14 +10,15 @@ export class NavBarComponent implements OnInit, OnDestroy {
 
   @ViewChild('navbar') private navbar!: ElementRef;
 
+  public open = false;
+
   @HostListener('window:scroll', ['$event'])
   handleScrollEvent(event: Event) {
     this.addStyling(event);
   }
 
-  constructor() { }
+  constructor(public responsiveService: ResponsiveQueryService) { }
   ngOnInit() {
-
   }
 
   ngOnDestroy() {
@@ -45,5 +47,13 @@ export class NavBarComponent implements OnInit, OnDestroy {
   public scrollToTop(): void {
     //@ts-ignore
     	document.scrollingElement?.scrollTop = 0;
+    }
+
+    public toggleMenu(): void {
+      this.open = !this.open;
+    }
+
+    public closeMenu(): void {
+      this.open = false;
     }
 }

@@ -8,6 +8,7 @@ import { ProjectHighlightsComponent } from '../components/project-highlights/pro
 import { FooterComponent } from './footer/footer.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AboutComponent } from './about/about.component';
+import { SkillsSlideshowComponent } from '../components/skills-slideshow/skills-slideshow.component';
 
 
 
@@ -24,7 +25,8 @@ import { AboutComponent } from './about/about.component';
     ExperienceHighlightsComponent,
     ProjectHighlightsComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsSlideshowComponent
   ],
   exports: [HomePageComponent]
 })

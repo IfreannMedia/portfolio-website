@@ -8,7 +8,7 @@
           <h4 class="title">{{project.name}}</h4>
         </div>
         <div class="img-desc">
-          <div *ngIf="project.imageUrl" class="img-container">
+          <div *ngIf="project.imageUrl && showImage" class="img-container">
             <img src="{{project.imageUrl}}" />
           </div>
           <p>{{project.description}}</p>
@@ -24,11 +24,7 @@
           </div>
 
           <div class="slider-container">
-            <owl-carousel-o class="skill-container" [options]="getSkillsOwlOptions(project)">
-              <ng-template carouselSlide *ngFor="let skill of project.technologiesUsed">
-                <p class="skill mt-24" (mousemove)="setBorderColour($event)">{{skill.name}}</p>
-              </ng-template>
-            </owl-carousel-o>
+            <app-skills-slideshow [skills]="project.technologiesUsed"></app-skills-slideshow>
           </div>
         </div>
 

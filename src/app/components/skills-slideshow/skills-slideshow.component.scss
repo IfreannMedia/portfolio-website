@@ -1,0 +1,23 @@
+@import 'colours';
+.skill-container {
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  .skill {
+    text-align: center;
+    --x: 50%;
+    --y: 50%;
+    border: 2px solid transparent;
+    position: relative;
+    appearance: none;
+    padding: 0.25em 0.25em;
+    margin: 0;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    color: $highlight;
+    background: linear-gradient(#1d2026, #1d2026) padding-box,
+      radial-gradient(farthest-corner at var(--x) var(--y), #02ffd5, #a06fee) border-box;
+  }
+}

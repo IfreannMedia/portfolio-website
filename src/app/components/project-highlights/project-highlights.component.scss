@@ -5,7 +5,7 @@
 }
 
 .card {
-  height: 350px;
+  height: auto;
   .header {
     .title {
       margin-bottom: 5px;
@@ -40,7 +40,7 @@
 
   .links {
     display: flex;
-    min-width: 200px;
+    // min-width: 200px;
     align-self: end;
   }
   .github-urls {

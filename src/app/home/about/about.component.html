@@ -1,9 +1,11 @@
-<section class="hero" id="about-section">
-  <div class="container">
-    <div class="card">
-      <p>Hi, my name is Warren and I work as a full stack web developer in Munich. I have a MSc from the Technical University of Dublin specializing in game development,
-        and a BA in German and English from Maynooth University. If you would like to discuss anything regarding my experience or projects, feel free to reach out.
-      </p>
-    </div>
+  <div class="main-slideshow-container" id="about-section">
+    <owl-carousel-o [options]="cardOptions">
+      <ng-template carouselSlide>
+        <div class="card">
+          <p>Hi, my name is Warren and I work as a full stack web developer in Munich. I have a MSc from the Technical University of Dublin specializing in game development,
+            and a BA in German and English from Maynooth University. If you would like to discuss anything regarding my experience or projects, feel free to reach out.
+          </p>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
-</section>
