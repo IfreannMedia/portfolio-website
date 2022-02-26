@@ -68,7 +68,9 @@
       height: 450px;
     }
     .flex-container {
-      height: 400px;
+      &.open {
+        height: 400px;
+      }
       width: 100%;
       flex-direction: column;
       justify-content: space-between;

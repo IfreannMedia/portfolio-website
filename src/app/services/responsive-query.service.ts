@@ -24,7 +24,11 @@ export class ResponsiveQueryService {
   }
 
   public isXtraLarge(): boolean {
-    return this.getScreenWidth() > 992;
+    return this.getScreenWidth() > 992 && this.getScreenWidth() < 1200;
+  }
+
+  public isXtraxtratraLarge(): boolean {
+    return this.getScreenWidth() > 1200;
   }
 
   public getSize(): SIZE {
@@ -37,6 +41,9 @@ export class ResponsiveQueryService {
     } else if (this.isXtraLarge()) {
       return SIZE.XLARGE;
     }
+    else if (this.isXtraxtratraLarge()) {
+      return SIZE.XXLARGE;
+    }
     console.warn("size of window not correctly recognized");
     return SIZE.MEDIUM
   }
@@ -46,5 +53,6 @@ export enum SIZE {
   SMALL,
   MEDIUM,
   LARGE,
-  XLARGE
+  XLARGE,
+  XXLARGE
 }

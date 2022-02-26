@@ -21,7 +21,7 @@ export class ExperienceHighlightsComponent implements OnInit {
   cardOptions: OwlOptions = {
     loop: false,
     mouseDrag: false,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 700,

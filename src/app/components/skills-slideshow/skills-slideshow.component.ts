@@ -12,13 +12,13 @@ export class SkillsSlideshowComponent implements OnInit {
 
 
   @Input()
-  public skills: {id: number, name: string}[] = [];
+  public skills: { id: number, name: string }[] = [];
 
   skillsOptions: OwlOptions = {
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
     dots: false,
     navSpeed: 700,
     nav: false,
@@ -46,9 +46,12 @@ export class SkillsSlideshowComponent implements OnInit {
         this.skillsOptions.items = 2;
         break;
       case SIZE.LARGE:
-        this.skillsOptions.items = 4;
+        this.skillsOptions.items = 3;
         break;
       case SIZE.XLARGE:
+        this.skillsOptions.items = 4;
+        break;
+      case SIZE.XXLARGE:
         this.skillsOptions.items = 5;
         break;
       default:
