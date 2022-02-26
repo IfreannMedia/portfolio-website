@@ -40,7 +40,6 @@ export class SkillsSlideshowComponent implements OnInit {
     switch (this.responsiveService.getSize()) {
       case SIZE.SMALL:
         this.skillsOptions.items = 1;
-        this.skillsOptions.autoHeight = true;
         break;
       case SIZE.MEDIUM:
         this.skillsOptions.items = 2;
@@ -54,10 +53,8 @@ export class SkillsSlideshowComponent implements OnInit {
       case SIZE.XXLARGE:
         this.skillsOptions.items = 5;
         break;
-      default:
-        break;
     }
-    console.log("check it ", this.skillsOptions);
+    this.skillsOptions.loop = this.skills.length > this.skillsOptions.items
   }
 
   public setBorderColour(event: Event) {
