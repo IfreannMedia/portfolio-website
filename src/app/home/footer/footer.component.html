@@ -1,6 +1,7 @@
 <footer>
   <div class="flex-container">
-    <p class="text">Designed and developed by Warren Roche</p>
-    <p class="text">Reach out: warrengamedev@gmail.com</p>
+    <p *ngIf="showFullText()">Designed and developed by Warren Roche</p>
+    <p *ngIf="showFullText()">Reach out: warrengamedev@gmail.com</p>
+    <p *ngIf="justShowEmail()" class="center">warrengamedev@gmail.com</p>
   </div>
 </footer>
