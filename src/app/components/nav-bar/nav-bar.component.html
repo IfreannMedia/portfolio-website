@@ -1,49 +1,50 @@
-<!-- <div class="nav" #navbar nav> -->
-<div class="nav" [ngClass]="{'shadow': !open}"  #navbar>
-  <div class="flex-container" [ngClass]="{'open': open}">
-    <img class="nav-image" src="../../assets/template/logo.svg" alt="Logo">
-    <!--
-    <ul class="list" [ngClass]="{'visible': open}">
-      <li class="element"><a class="clickable" (click)="scrollToView('nav-bar'); closeMenu()" title="">Home</a></li>
-      <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()" title="">Experience</a></li>
-      <li class="element"><a class="clickable" (click)="scrollToView('projects-section'); closeMenu()" title="">Projects</a></li>
-      <li class="element"><a class="clickable"(click)="scrollToView('about-section'); closeMenu()" title="">About</a></li>
-      <li class="element"><a class="clickable" href="../../../assets/pdf/warren-roche-cv.pdf" target="_blank" title="">CV</a></li>
-    </ul>
-    <div class="icons" [ngClass]="{'visible': open}"
-    *ngIf=" responsiveService.isSmall() || responsiveService.isMedium()">
-      <img class="clickable icon" src="../../../assets/icons/logos/linkedin.svg" (click)="navigateTo('https://linkedin.com/in/warren-roche'); closeMenu()" />
-      <img class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
-      <img class="clickable icon" src="../../../assets/icons/logos/mail.svg" (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
-    </div>
-  -->
-  </div>
+<div class="nav" [ngClass]="{'shadow': !open}" #navbar>
+  <img class="nav-image" src="../../assets/template/logo.svg" alt="Logo">
+  <ul class="list wide" [ngClass]="{'visible': !responsiveService.isSmall() && !responsiveService.isMedium()}">
+    <li class="element"><a class="clickable" (click)="scrollToView('nav-bar'); closeMenu()" title="">Home</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()"
+        title="">Experience</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('projects-section'); closeMenu()"
+        title="">Projects</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('about-section'); closeMenu()" title="">About</a>
+    </li>
+    <li class="element"><a class="clickable" href="../../../assets/pdf/warren-roche-cv.pdf" target="_blank"
+        title="">CV</a></li>
+  </ul>
   <div class="icons" *ngIf="!responsiveService.isSmall() && !responsiveService.isMedium()">
-    <img class="clickable icon" src="../../../assets/icons/logos/linkedin.svg" (click)="navigateTo('https://linkedin.com/in/warren-roche');  closeMenu()" />
-    <img class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
-    <img class="clickable icon" src="../../../assets/icons/logos/mail.svg" (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
+    <img class="clickable icon" src="../../../assets/icons/logos/linkedin.svg"
+      (click)="navigateTo('https://linkedin.com/in/warren-roche');  closeMenu()" />
+    <img class="clickable icon" src="../../../assets/icons/logos/github.svg"
+      (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
+    <img class="clickable icon" src="../../../assets/icons/logos/mail.svg"
+      (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
   </div>
   <div class="menu-btn">
-    <img class="clickable icon"
-    [ngClass]="{'visible': responsiveService.isSmall() || responsiveService.isMedium()}"
-    src="../../../assets/icons/menu.svg" (click)="toggleMenu()" />
+    <img class="clickable icon" [ngClass]="{'visible': responsiveService.isSmall() || responsiveService.isMedium()}"
+      src="../../../assets/icons/menu.svg" (click)="toggleMenu()" />
   </div>
-
 </div>
 
-<div class="expanded-menu shadow" [ngClass]="{'open': open && responsiveService.isSmall()}">
+<div class="expanded-menu shadow"
+  [ngClass]="{'open': open && (responsiveService.isSmall() || responsiveService.isMedium())}">
   <ul class="list" [ngClass]="{'visible': open}">
     <li class="element"><a class="clickable" (click)="scrollToView('nav-bar'); closeMenu()" title="">Home</a></li>
-    <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()" title="">Experience</a></li>
-    <li class="element"><a class="clickable" (click)="scrollToView('projects-section'); closeMenu()" title="">Projects</a></li>
-    <li class="element"><a class="clickable"(click)="scrollToView('about-section'); closeMenu()" title="">About</a></li>
-    <li class="element"><a class="clickable" href="../../../assets/pdf/warren-roche-cv.pdf" target="_blank" title="">CV</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()"
+        title="">Experience</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('projects-section'); closeMenu()"
+        title="">Projects</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('about-section'); closeMenu()" title="">About</a>
+    </li>
+    <li class="element"><a class="clickable" href="../../../assets/pdf/warren-roche-cv.pdf" target="_blank"
+        title="">CV</a></li>
     <div class="icons" [ngClass]="{'visible': open}"
-    *ngIf="responsiveService.isSmall() || responsiveService.isMedium()">
-      <img class="clickable icon" src="../../../assets/icons/logos/linkedin.svg" (click)="navigateTo('https://linkedin.com/in/warren-roche'); closeMenu()" />
-      <img class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
-      <img class="clickable icon" src="../../../assets/icons/logos/mail.svg" (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
+      *ngIf="responsiveService.isSmall() || responsiveService.isMedium()">
+      <img class="clickable icon" src="../../../assets/icons/logos/linkedin.svg"
+        (click)="navigateTo('https://linkedin.com/in/warren-roche'); closeMenu()" />
+      <img class="clickable icon" src="../../../assets/icons/logos/github.svg"
+        (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
+      <img class="clickable icon" src="../../../assets/icons/logos/mail.svg"
+        (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
     </div>
   </ul>
-
 </div>
