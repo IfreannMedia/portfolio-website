@@ -1,3 +1,8 @@
 .button .button-primary {
   letter-spacing: 1px;
 }
+
+.body-wrap {
+  overflow-y: scroll;
+  height: calc(100vh - 130px);
+}
