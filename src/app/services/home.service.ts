@@ -14,6 +14,7 @@ export class HomeService {
   constructor(private http: HttpClient) { }
 
   public getProjects(): Observable<Project[]> {
+    console.log("building URL, prod:  ", environment.production, " ", environment.baseUrl)
     return this.http.get<Project[]>(environment.baseUrl + "projects").pipe(first());
   }
 
