@@ -31,7 +31,7 @@
 
 </div>
 
-<div class="expanded-menu shadow" [ngClass]="{'open': open}">
+<div class="expanded-menu shadow" [ngClass]="{'open': open && responsiveService.isSmall()}">
   <ul class="list" [ngClass]="{'visible': open}">
     <li class="element"><a class="clickable" (click)="scrollToView('nav-bar'); closeMenu()" title="">Home</a></li>
     <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()" title="">Experience</a></li>
@@ -39,7 +39,7 @@
     <li class="element"><a class="clickable"(click)="scrollToView('about-section'); closeMenu()" title="">About</a></li>
     <li class="element"><a class="clickable" href="../../../assets/pdf/warren-roche-cv.pdf" target="_blank" title="">CV</a></li>
     <div class="icons" [ngClass]="{'visible': open}"
-    *ngIf=" responsiveService.isSmall() || responsiveService.isMedium()">
+    *ngIf="responsiveService.isSmall() || responsiveService.isMedium()">
       <img class="clickable icon" src="../../../assets/icons/logos/linkedin.svg" (click)="navigateTo('https://linkedin.com/in/warren-roche'); closeMenu()" />
       <img class="clickable icon" src="../../../assets/icons/logos/github.svg" (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
       <img class="clickable icon" src="../../../assets/icons/logos/mail.svg" (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
