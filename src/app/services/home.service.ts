@@ -17,7 +17,8 @@ export class HomeService {
     let headers: HttpHeaders = new HttpHeaders();
     console.log("building URL, prod:  ", environment.production, " ", environment.baseUrl)
     console.log("with headers:", headers)
-    return this.http.get<Project[]>(environment.baseUrl + "projects", {headers: headers}).pipe(first());
+    fetch(environment.baseUrl + "projects").then(data => console.log("fetch worked and returned data: ", data));
+    return this.http.get<Project[]>(environment.baseUrl + "projects", { headers: headers }).pipe(first());
   }
 
   public getExperiences(): Observable<Experience[]> {
