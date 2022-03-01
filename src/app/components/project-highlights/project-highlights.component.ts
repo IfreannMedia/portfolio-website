@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
 import { Project } from './../../classes/project';
 import { HomeService } from './../../services/home.service';
 import { ResponsiveQueryService } from './../../services/responsive-query.service';
@@ -35,6 +35,7 @@ export class ProjectHighlightsComponent implements OnInit {
     this.showImage = !this.responsiveService.isSmall();
     this.getProjects();
   }
+
   private getProjects() {
     this.homeService.getProjects().subscribe({
       next: (projects: Project[]) => {
@@ -44,8 +45,20 @@ export class ProjectHighlightsComponent implements OnInit {
     });
   }
 
-  openGithub(link: string) {
+  public openGithub(link: string) {
     window.open(link, "_blank");
+  }
+
+  public scrollToTopOfCard(owl: CarouselComponent): void {
+    if (this.shouldScrollToTop(owl)) {
+      console.log("conditions met");
+      document.getElementById('exp-card-slider')?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  private shouldScrollToTop(owl: CarouselComponent): boolean | undefined {
+    return owl.slidesOutputData && owl.slidesOutputData.slides && owl.slidesOutputData.slides.length > 0
+      && (this.responsiveService.isSmall() || this.responsiveService.isMedium());
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/
 import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
 import { Experience } from './../../classes/experience';
 import { HomeService } from './../../services/home.service';
+import { ResponsiveQueryService } from './../../services/responsive-query.service';
 @Component({
   selector: 'app-experience-highlights',
   templateUrl: './experience-highlights.component.html',
@@ -17,6 +18,8 @@ export class ExperienceHighlightsComponent implements OnInit {
 
   public experiences: Experience[] = [];
 
+  private curSlide: number = 0;
+
   cardOptions: OwlOptions = {
     loop: false,
     mouseDrag: false,
@@ -31,7 +34,8 @@ export class ExperienceHighlightsComponent implements OnInit {
     autoWidth: true
   }
 
-  constructor(private homeService: HomeService) { }
+  constructor(private homeService: HomeService,
+    private responsiveQueryService: ResponsiveQueryService) { }
 
   ngOnInit(): void {
     this.getExperiences();
@@ -47,10 +51,18 @@ export class ExperienceHighlightsComponent implements OnInit {
 
   public parseDate(date: Date): string {
     let dateString: string = date as unknown as string;
-    return dateString.slice(0, dateString.length-1);
+    return dateString.slice(0, dateString.length - 1);
   }
 
-  public scrollToTopOfCard(elementId: string): void {
-    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  public scrollToTopOfCard(owl: CarouselComponent): void {
+    if (this.shouldScrollToTop(owl)) {
+      console.log("conditions met");
+      document.getElementById('exp-card-slider')?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  private shouldScrollToTop(owl: CarouselComponent): boolean | undefined {
+    return owl.slidesOutputData && owl.slidesOutputData.slides && owl.slidesOutputData.slides.length > 0
+      && (this.responsiveQueryService.isSmall() || this.responsiveQueryService.isMedium());
   }
 }
