@@ -6,12 +6,4 @@ export class Experience {
   public dateTo: Date = new Date();
   public current?: boolean;
   public location: string = "";
-
-  // constructor(experience: any){
-  //   if(experience.technologiesUsed){
-  //     experience.technologiesUser.forEach((tech: {id: number, name: string}) => {
-  //       this.technologiesUsed.push(tech.name);
-  //     });
-  //   }
-  // }
 }

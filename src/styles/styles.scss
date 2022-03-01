@@ -5,6 +5,7 @@
 @import 'slideshow';
 @import './template/abstracts/variables';
 @import 'card';
+@import "../../node_modules/skeleton-screen-css/dist/index.scss";
 
 .clickable:hover {
   cursor: pointer;

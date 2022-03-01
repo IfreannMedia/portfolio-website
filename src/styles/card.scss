@@ -10,6 +10,18 @@
   background-color: $background-three;
   display: flex;
   flex-direction: column;
+  width: auto;
+
+  &.ssc {
+    height: 400px;
+    .ssc-square {
+      height: 100%;
+      margin: 10px 0  0 0;
+    }
+  }
+  p {
+    color: #fff;
+  }
   .body {
     display: flex;
     flex-direction: column;
@@ -19,4 +31,14 @@
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+// max-width: 274px;
+
+@media screen and (max-width: 374px) {
+  .card {
+    max-width: 274px;
+  }
+
 }

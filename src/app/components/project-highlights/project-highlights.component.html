@@ -1,7 +1,7 @@
 <div class="main-slideshow-container" id="projects-section">
   <h5 class="hint">Here are some projects I've worked on, privately and during my masters.</h5>
 
-  <owl-carousel-o [options]="cardOptions">
+  <owl-carousel-o [options]="cardOptions" *ngIf="projects.length; else scc">
     <ng-template carouselSlide *ngFor="let project of projects">
       <div class="card">
         <div class="header">
@@ -27,9 +27,19 @@
             <app-skills-slideshow [skills]="project.technologiesUsed"></app-skills-slideshow>
           </div>
         </div>
-
-
       </div>
     </ng-template>
   </owl-carousel-o>
+  <ng-template #scc>
+    <div class="ssc card">
+      <div class="flex align-center justify-between">
+        <div class="ssc-head-line w-50"></div>
+        <div class="w-40">
+          <div class="ssc-line w-70"></div>
+          <div class="ssc-line w-100"></div>
+        </div>
+      </div>
+      <div class="ssc-square mb"></div>
+    </div>
+  </ng-template>
 </div>

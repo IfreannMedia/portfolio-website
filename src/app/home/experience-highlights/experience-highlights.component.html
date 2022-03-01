@@ -1,17 +1,17 @@
 <div class="main-slideshow-container" id="experience-section">
   <h5 class="hint">Here are some snippets regarding my work as a software developer.</h5>
-
-  <owl-carousel-o #owl id="card-slider" [options]="cardOptions">
+  <owl-carousel-o #owl id="card-slider" [options]="cardOptions" *ngIf="experiences.length; else scc">
     <ng-template carouselSlide *ngFor="let unit of experiences">
       <div class="card" #expCard>
         <div class="header">
           <div class="title-container">
-           <h4 class="title">{{unit.title}}</h4>
-          <p class="location" *ngIf="unit.location">{{unit.location}}</p>
-         </div>
+            <h4 class="title">{{unit.title}}</h4>
+            <p class="location" *ngIf="unit.location">{{unit.location}}</p>
+          </div>
           <div class="dates">
-            <p>{{unit.dateFrom | date : "dd/MM/yy"}}</p><p> - </p>
-            <p>{{unit.current ? "CURRENT" : unit.dateTo| date: "dd/MM/yy"}}</p>
+            <p>{{parseDate(unit.dateFrom) | date : "dd/MM/yy"}}</p>
+            <p> - </p>
+            <p>{{unit.current ? "CURRENT" : parseDate(unit.dateTo) | date: "dd/MM/yy"}}</p>
           </div>
         </div>
         <div class="body">
@@ -21,4 +21,16 @@
       </div>
     </ng-template>
   </owl-carousel-o>
+  <ng-template #scc>
+    <div class="ssc card">
+      <div class="flex align-center justify-between">
+        <div class="ssc-head-line w-50"></div>
+        <div class="w-40">
+          <div class="ssc-line w-70"></div>
+          <div class="ssc-line w-100"></div>
+        </div>
+      </div>
+      <div class="ssc-square mb"></div>
+    </div>
+  </ng-template>
 </div>

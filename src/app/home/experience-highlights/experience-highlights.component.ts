@@ -2,7 +2,6 @@ import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/
 import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
 import { Experience } from './../../classes/experience';
 import { HomeService } from './../../services/home.service';
-import { ResponsiveQueryService } from './../../services/responsive-query.service';
 @Component({
   selector: 'app-experience-highlights',
   templateUrl: './experience-highlights.component.html',
@@ -21,7 +20,7 @@ export class ExperienceHighlightsComponent implements OnInit {
   cardOptions: OwlOptions = {
     loop: false,
     mouseDrag: false,
-    touchDrag: true,
+    touchDrag: false,
     pullDrag: false,
     dots: false,
     navSpeed: 700,
@@ -44,5 +43,14 @@ export class ExperienceHighlightsComponent implements OnInit {
         this.experiences = Experiences;
       }
     })
+  }
+
+  public parseDate(date: Date): string {
+    let dateString: string = date as unknown as string;
+    return dateString.slice(0, dateString.length-1);
+  }
+
+  public scrollToTopOfCard(elementId: string): void {
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
