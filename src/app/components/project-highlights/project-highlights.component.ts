@@ -49,10 +49,10 @@ export class ProjectHighlightsComponent implements OnInit {
     window.open(link, "_blank");
   }
 
-  public scrollToTopOfCard(owl: CarouselComponent): void {
+  public scrollToTopOfCard(owl: CarouselComponent, elementId: string): void {
     if (this.shouldScrollToTop(owl)) {
       console.log("conditions met");
-      document.getElementById('exp-card-slider')?.scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 

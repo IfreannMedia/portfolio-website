@@ -1,7 +1,7 @@
 <div class="main-slideshow-container" id="projects-section">
   <h5 class="hint">Here are some projects I've worked on, privately and during my masters.</h5>
 
-  <owl-carousel-o [options]="cardOptions" (changed)="scrollToTopOfCard(owl)" #owl *ngIf="projects.length; else scc">
+  <owl-carousel-o [options]="cardOptions" (changed)="scrollToTopOfCard(owl, 'proj-card-slider')" id="proj-card-slider" #owl *ngIf="projects.length; else scc">
     <ng-template carouselSlide *ngFor="let project of projects">
       <div class="card">
         <div class="header">
