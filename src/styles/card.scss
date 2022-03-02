@@ -21,6 +21,8 @@
   }
   p {
     color: #fff;
+    width: 100%;
+    max-width: 100%;
   }
   .body {
     display: flex;
@@ -33,12 +35,13 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-// max-width: 274px;
-
 @media screen and (max-width: 375px) {
   .card {
     max-width: 274px;
+
+    p {
+      width: 100%;
+    }
   }
 
 }
