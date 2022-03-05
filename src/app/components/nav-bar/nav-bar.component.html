@@ -17,7 +17,7 @@
     <img class="clickable icon" src="../../../assets/icons/logos/github.svg"
       (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
     <img class="clickable icon" src="../../../assets/icons/logos/mail.svg"
-      (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
+      (click)="navigateTo('mailto:warrengamedev@gmail.com', '_self'); closeMenu()" />
   </div>
   <div class="menu-btn">
     <img class="clickable icon" [ngClass]="{'visible': responsiveService.isSmall() || responsiveService.isMedium()}"
@@ -44,7 +44,7 @@
       <img class="clickable icon" src="../../../assets/icons/logos/github.svg"
         (click)="navigateTo('https://github.com/IfreannMedia'); closeMenu()" />
       <img class="clickable icon" src="../../../assets/icons/logos/mail.svg"
-        (click)="navigateTo('mailto:warrengamedev@gmail.com'); closeMenu()" />
+        (click)="navigateTo('mailto:warrengamedev@gmail.com', '_self'); closeMenu()" />
     </div>
   </ul>
 </div>

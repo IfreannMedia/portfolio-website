@@ -12,8 +12,8 @@ export class NavBarComponent {
 
   constructor(public responsiveService: ResponsiveQueryService) { }
 
-  public navigateTo(url: string): void {
-    window.open(url, "_blank");
+  public navigateTo(url: string, target: string = '_blank'): void {
+    window.open(url, target);
   }
 
   public scrollToView(elementId: string): void {
