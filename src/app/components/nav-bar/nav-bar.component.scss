@@ -4,8 +4,7 @@
   height: 80px;
   width: 100%;
   padding: 20px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   top: 0;
   max-width: 100%;
   background-color: $nav-background;
@@ -48,8 +47,7 @@
 
 .expanded-menu {
   display: none;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   top: 80px;
   z-index: 3;
   background-color: $nav-background;

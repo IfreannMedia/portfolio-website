@@ -1,14 +1,12 @@
 @import 'colours';
 
 footer {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 2;
   background-color: $nav-background;
   height: 50px;
-  // position: relative;
   div.flex-container {
     height: 100%;
     display: flex;
