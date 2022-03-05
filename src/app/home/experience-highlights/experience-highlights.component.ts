@@ -18,8 +18,6 @@ export class ExperienceHighlightsComponent implements OnInit {
 
   public experiences: Experience[] = [];
 
-  private curSlide: number = 0;
-
   cardOptions: OwlOptions = {
     loop: false,
     mouseDrag: false,

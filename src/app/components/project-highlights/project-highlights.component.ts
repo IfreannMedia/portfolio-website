@@ -25,7 +25,8 @@ export class ProjectHighlightsComponent implements OnInit {
     nav: true,
     items: 1,
     startPosition: 0,
-    autoHeight: true
+    autoHeight: true,
+    autoWidth: true
   }
 
   constructor(private homeService: HomeService,

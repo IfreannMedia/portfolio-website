@@ -17,7 +17,8 @@ export class AboutComponent implements OnInit {
     dots: false,
     nav: true,
     items: 1,
-    startPosition: 0
+    startPosition: 0,
+    autoWidth: true
   }
 
   constructor() { }

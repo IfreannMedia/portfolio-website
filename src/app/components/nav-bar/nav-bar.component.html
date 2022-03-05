@@ -1,7 +1,7 @@
 <div class="nav" [ngClass]="{'shadow': !open}" #navbar>
   <img class="nav-image" src="../../assets/template/logo.svg" alt="Logo">
   <ul class="list wide" [ngClass]="{'visible': !responsiveService.isSmall() && !responsiveService.isMedium()}">
-    <li class="element"><a class="clickable" (click)="scrollToView('nav-bar'); closeMenu()" title="">Home</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('landing-section', 'end'); closeMenu()" title="">Home</a></li>
     <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()"
         title="">Experience</a></li>
     <li class="element"><a class="clickable" (click)="scrollToView('projects-section'); closeMenu()"
@@ -28,7 +28,7 @@
 <div class="expanded-menu shadow"
   [ngClass]="{'open': open && (responsiveService.isSmall() || responsiveService.isMedium())}">
   <ul class="list" [ngClass]="{'visible': open}">
-    <li class="element"><a class="clickable" (click)="scrollToView('nav-bar'); closeMenu()" title="">Home</a></li>
+    <li class="element"><a class="clickable" (click)="scrollToView('landing-section', 'end'); closeMenu()" title="">Home</a></li>
     <li class="element"><a class="clickable" (click)="scrollToView('experience-section'); closeMenu()"
         title="">Experience</a></li>
     <li class="element"><a class="clickable" (click)="scrollToView('projects-section'); closeMenu()"

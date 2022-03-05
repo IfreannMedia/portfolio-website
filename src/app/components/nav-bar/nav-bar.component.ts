@@ -16,8 +16,8 @@ export class NavBarComponent {
     window.open(url, target);
   }
 
-  public scrollToView(elementId: string): void {
-    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  public scrollToView(elementId: string, block: ScrollLogicalPosition = "start"): void {
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: block });
   }
 
   public scrollToTop(): void {
