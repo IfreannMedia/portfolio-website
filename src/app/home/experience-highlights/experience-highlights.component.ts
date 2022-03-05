@@ -54,10 +54,10 @@ export class ExperienceHighlightsComponent implements OnInit {
     return dateString.slice(0, dateString.length - 1);
   }
 
-  public scrollToTopOfCard(owl: CarouselComponent): void {
+  public scrollToTopOfCard(owl: CarouselComponent, elementId: string = 'exp-card-slider'): void {
     if (this.shouldScrollToTop(owl)) {
       console.log("conditions met");
-      document.getElementById('exp-card-slider')?.scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 

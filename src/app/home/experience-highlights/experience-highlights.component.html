@@ -1,6 +1,6 @@
 <div class="main-slideshow-container" id="experience-section">
-  <h5 class="hint">Here are some snippets regarding my work as a software developer.</h5>
-  <owl-carousel-o (changed)="scrollToTopOfCard(owl)" #owl id="exp-card-slider" [options]="cardOptions" *ngIf="experiences.length; else scc">
+  <h5 class="hint" id="exp-hint">Here are some snippets regarding my work as a software developer.</h5>
+  <owl-carousel-o (changed)="scrollToTopOfCard(owl,'exp-hint')" #owl id="exp-card-slider" [options]="cardOptions" *ngIf="experiences.length; else scc">
     <ng-template carouselSlide *ngFor="let unit of experiences">
       <div class="card" #expCard>
         <div class="header">
